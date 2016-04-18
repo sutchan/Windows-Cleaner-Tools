@@ -633,6 +633,6 @@ CLS
 COLOR 2F
 ECHO.
 ECHO.
-ECHO	系统清理已经完成, 感谢你使用 %zuoz% 的作品！
+ECHO	系统清理已经完成, 感谢你使用 %author% 的作品！
 
 PAUSE
