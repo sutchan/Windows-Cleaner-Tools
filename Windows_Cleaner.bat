@@ -2,7 +2,7 @@
 REM 设置环境变量
 SET build=20160418
 SET author=Tsun
-SET title=Windows Cleaner/Windows 清理工具
+SET title=Windows Cleaner Tools/Windows 清理工具
 
 
 title %title% by %author% Ver:%build%
