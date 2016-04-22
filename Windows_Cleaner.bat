@@ -1,6 +1,6 @@
 @ECHO	off
 REM 设置环境变量
-SET build=20160418
+SET build=20160422
 SET author=Tsun
 SET title=Windows Cleaner Tools/Windows 清理工具
 
@@ -22,7 +22,7 @@ ECHO.	我的 Windows 版本是
 ver
 
 ECHO.
-ECHO.	现在开始清理优化 Windows XP，
+ECHO.	现在开始清理优化 Windows，
 ECHO.	建议您退出所有正在运行的软件，
 ECHO.	以达到最好的清理效果！
 ECHO.	请按右键“以管理员身份运行”本程序！！！   
@@ -47,6 +47,7 @@ RD  c:\Config.Msi /Q /S
 RD  d:\Config.Msi /Q /S
 RD  e:\Config.Msi /Q /S
 RD  f:\Config.Msi /Q /S
+RD  G:\Config.Msi /Q /S
 
 
 ECHO.
@@ -563,8 +564,11 @@ ECHO	清理 迅雷
 RD  "%ProgramData%\TSLOG\" /Q /S
 RD  "%ProgramData%\Xunlei\" /Q /S
 
-ECHO	清理 迅雷
+ECHO	清理 WD
 RD  "%ProgramData%\Western Digital\" /Q /S
+
+ECHO	清理 WPS
+DEL  "E:\Program Files\WPS Office\wpscenter.exe" /Q /S
 
 ECHO.
 ECHO	清理3721文件
@@ -614,7 +618,7 @@ RD  "%APPDATA%\Media Player Classic" /q
 RD  "%APPDATA%\pe explorer" /q
 RD  "%APPDATA%\360safe" /q
 
-RD  "%ALLUSERSPROFILE%\Application Data\Kingsoft\PowerWoRD  Lite" /q
+RD  "%ALLUSERSPROFILE%\Application Data\Kingsoft\PowerWoRD Lite" /q
 RD  "%ALLUSERSPROFILE%\Application Data\TEMP" /q
 
 ECHO PHP Now 清理
