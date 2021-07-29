@@ -1,260 +1,265 @@
 @ECHO	off
-REM è®¾ç½®ç¯å¢ƒå˜é‡
-SET build=20160422
-SET author=Tsun
-SET title=Windows Cleaner Tools/Windows æ¸…ç†å·¥å…·
+REM ÉèÖÃ»·¾³±äÁ¿
+SET build=2021730
+SET author=Sut
+SET title=Windows Cleaner Tools/Windows ÇåÀí¹¤¾ß
 
 
 title %title% by %author% Ver:%build%
 
 COLOR 2F
-ECHO	â”						â”“
-ECHO		ã€ %title% ã€‘
+ECHO	©³						©·
+ECHO		¡¾ %title% ¡¿
 ECHO.
 ECHO		Author  : %author%
 ECHO		Contact : xepinchan@qq.com
 ECHO		Building: %build%
-ECHO	â”—						â”›
+ECHO	©»						©¿
 
-ECHO.	æ”¯æŒ Windows XP / Windows 7 / Windows 8
+ECHO.	Ö§³Ö Windows XP/7/8/10
 ECHO.
-ECHO.	æˆ‘çš„ Windows ç‰ˆæœ¬æ˜¯
-ver
+ECHO.	ÎÒµÄ Windows °æ±¾ÊÇ
+VER
 
 ECHO.
-ECHO.	ç°åœ¨å¼€å§‹æ¸…ç†ä¼˜åŒ– Windowsï¼Œ
-ECHO.	å»ºè®®æ‚¨é€€å‡ºæ‰€æœ‰æ­£åœ¨è¿è¡Œçš„è½¯ä»¶ï¼Œ
-ECHO.	ä»¥è¾¾åˆ°æœ€å¥½çš„æ¸…ç†æ•ˆæœï¼
-ECHO.	è¯·æŒ‰å³é”®â€œä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œâ€æœ¬ç¨‹åºï¼ï¼ï¼   
+ECHO.	ÏÖÔÚ¿ªÊ¼ÇåÀíÓÅ»¯ Windows£¬
+ECHO.	½¨ÒéÄúÍË³öËùÓĞÕıÔÚÔËĞĞµÄÈí¼ş£¬
+ECHO.	ÒÔ´ïµ½×îºÃµÄÇåÀíĞ§¹û£¡
+ECHO.	Çë°´ÓÒ¼ü¡°ÒÔ¹ÜÀíÔ±Éí·İÔËĞĞ¡±±¾³ÌĞò£¡£¡£¡   
 ECHO.
 
 PAUSE
 COLOR 1E
 ECHO.
-ECHO	è®¾ç½®ç³»ç»Ÿä¸´æ—¶æ–‡ä»¶å¤¹ä½ç½®
+ECHO	ÉèÖÃÏµÍ³ÁÙÊ±ÎÄ¼ş¼ĞÎ»ÖÃ
 SET %TEMP% and %TMP% "d:\temp" "d:\temp"
 
-ECHO	æ¸…ç†ä¸´æ—¶æ–‡ä»¶å¤¹çš„åƒåœ¾
-DEL "%TEMP%\*.*" /s /q
-DEL "%TMP%\*.*" /s /q
-RD  "%TEMP%" /s /q
+ECHO	ÇåÀíÁÙÊ±ÎÄ¼ş¼ĞµÄÀ¬»ø
+DEL "%TEMP%\*.*"  /S  /Q
+DEL "%TMP%\*.*"  /S  /Q
+RD "%TEMP%"  /S  /Q
 MD "%TEMP%"
 
-DEL "%APPDATA%\Local\Temp\*.*" /s /q
-RD  "%APPDATA%\Local\Temp" /s /q
+DEL "%APPDATA%\Temp\*.*"  /S  /Q
+RD  "%APPDATA%\Temp"  /S  /Q
 
-RD  c:\Config.Msi /Q /S
-RD  d:\Config.Msi /Q /S
-RD  e:\Config.Msi /Q /S
-RD  f:\Config.Msi /Q /S
-RD  G:\Config.Msi /Q /S
+RD  c:\Config.Msi  /Q  /S
+RD  d:\Config.Msi  /Q  /S
+RD  e:\Config.Msi  /Q  /S
+RD  f:\Config.Msi  /Q  /S
+RD  G:\Config.Msi  /Q  /S
 
+RD  C:\PerfLogs  /Q  /S
+RD  C:\Recovery  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç† Windows ç›®å½•ä¸‹çš„æ— ç”¨æ–‡ä»¶å’Œæ–‡ä»¶å¤¹
-DEL "%WINDIR%\clock.avi"
-DEL "%WINDIR%\*.tmp" /f
+ECHO	ÇåÀí Windows Ä¿Â¼ÏÂµÄÎŞÓÃÎÄ¼şºÍÎÄ¼ş¼Ğ
 DEL "%WINDIR%\*.ico" /f
-DEL "%WINDIR%\*.log" /s
-DEL "%WINDIR%\system32\*.tmp"
-DEL "%WINDIR%\dragon.exe" /f
+DEL "%WINDIR%\*.log"  /S
+DEL "%WINDIR%\*.tmp" /f
 DEL "%WINDIR%\IRIMG1.BMP" /f
-DEL "%WINDIR%\Tasks\SCHEDLGU.TXT" /f
-DEL "%WINDIR%\SysWOW64\Win7ç½‘é“¶è¡¥ä¸.exe" /f
-DEL "%WINDIR%\SysWOW64\é©±åŠ¨ç²¾çµ.exe" /f
-DEL "%WINDIR%\SysWOW64\service.exe" /f
-DEL "%WINDIR%\SysWOW64\Win7ç½‘é“¶è¡¥ä¸.exe" /f
-DEL "%WINDIR%\SysWOW64\èµ„æ–™è½¬ç§»å·¥å…·.exe" /f
+DEL "%WINDIR%\SysWOW64\Win7ÍøÒø²¹¶¡.exe" /f
 DEL "%WINDIR%\SysWOW64\oem7F7.exe" /f
-RD  "%WINDIR%\log" /s /q
-RD  "%WINDIR%\msdownld.tmp" /s /q
-RD  "%WINDIR%\Logs" /s /q
-RD  "%WINDIR%\winsxs_del" /s /q
-RD  "%WINDIR%\winsxs\Backup" /s /q
-RD  "%WINDIR%\SchCache" /s /q
-RD  "%WINDIR%\temp" /s /q
-RD  "%WINDIR%\tracing" /s /q
-RD  "%WINDIR%\Offline Web Pages" /s /q
-RD  "%WINDIR%\ModemLogs" /s /q
-RD  "%WINDIR%\LiveKernelReports" /s /q
-RD  "%WINDIR%\Downloaded Program Files" /s /q
-RD  "%WINDIR%\Performance" /s /q
-RD  "%WINDIR%\Setup" /s /q
-RD  "%WINDIR%\rescache" /s /q
+DEL "%WINDIR%\SysWOW64\service.exe" /f
+DEL "%WINDIR%\SysWOW64\×ÊÁÏ×ªÒÆ¹¤¾ß.exe" /f
+DEL "%WINDIR%\SysWOW64\Çı¶¯¾«Áé.exe" /f
+DEL "%WINDIR%\Tasks\SCHEDLGU.TXT" /f
+DEL "%WINDIR%\clock.avi"
+DEL "%WINDIR%\dragon.exe" /f
+DEL "%WINDIR%\system32\*.tmp"
+RD  "%WINDIR%\Downloaded Program Files"  /S  /Q
+RD  "%WINDIR%\LiveKernelReports"  /S  /Q
+RD  "%WINDIR%\Logs"  /S  /Q
+RD  "%WINDIR%\ModemLogs"  /S  /Q
+RD  "%WINDIR%\Offline Web Pages"  /S  /Q
+RD  "%WINDIR%\Performance"  /S  /Q
+RD  "%WINDIR%\SchCache"  /S  /Q
+RD  "%WINDIR%\Setup"  /S  /Q
+RD  "%WINDIR%\log"  /S  /Q
+RD  "%WINDIR%\msdownld.tmp"  /S  /Q
+RD  "%WINDIR%\rescache"  /S  /Q
+RD  "%WINDIR%\servicing\LCU"  /S  /Q
+RD  "%WINDIR%\temp"  /S  /Q
+RD  "%WINDIR%\tracing"  /S  /Q
+RD  "%WINDIR%\winsxs\Backup"  /S  /Q
+RD  "%WINDIR%\winsxs_del"  /S  /Q
 
-ECHO åˆ é™¤è¡¥ä¸å¤‡ä»½ç›®å½•
-RD  %windir%\SoftwareDistribution\Download /Q /S
-RD  %windir%\$hf_mig$ /Q /S
-RD  %SYSTEMDRIVE%\PerfLog /Q /S
+ECHO É¾³ı²¹¶¡±¸·İÄ¿Â¼
+RD  %windir%\SoftwareDistribution\Download  /Q  /S
+RD  %windir%\$hf_mig$  /Q  /S
+RD  %SYSTEMDRIVE%\PerfLog  /Q  /S
 dir %windir%\$NtUninstall* /a:d /b >%windir%\update.txt
-for /f %%i in (%windir%\update.txt) do RD  %windir%\%%i /s /q
-DEL %windir%\update.txt /f /q
-RD  "%SYSTEMDRIVE%\SWTOOLS" /Q /S
+for /f %%i in (%windir%\update.txt) do RD  %windir%\%%i  /S  /Q
+DEL %windir%\update.txt /f  /Q
+RD  "%SYSTEMDRIVE%\SWTOOLS"  /Q  /S
 
-rem Win7 æ— ç”¨æ–‡ä»¶å¤¹æ¸…ç†
-RD  "%HOMEPATH%\AppData\Local\Temp" /Q /S
-RD  "%HOMEPATH%\AppData\Local\Microsoft\Feeds Cache\" /Q /S
-RD  "%HOMEPATH%\AppData\Local\ElevatedDiagnostics" /Q /S
-RD  "%HOMEPATH%\AppData\Roaming\360Safe" /Q /S
-RD  "%HOMEPATH%\AppData\Roaming\360se" /Q /S
-RD  "%HOMEPATH%\AppData\Roaming\FlashFXP" /Q /S
-RD  "%HOMEPATH%\AppData\Roaming\PPStream" /Q /S
-RD  "%HOMEPATH%\AppData\Roaming\Tencent" /Q /S
-RD  "%HOMEPATH%\AppData\LocalLow\Thunder Network" /Q /S
+REM ÎŞÓÃÎÄ¼ş¼ĞÇåÀí
+DEL "%LOCALAPPDATA%\Microsoft\Windows\Cache\*.*"  /Q  /S
+DEL "%LOCALAPPDATA%\Microsoft\Windows\Explorer\*.*"  /Q  /S
+DEL "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Caches\*.*"  /Q
+DEL "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Explorer\*.*"  /Q
+DEL "%SYSTEMDRIVE%\Users\Public\Music\Sample Music\*.*"  /Q
+DEL "%SYSTEMDRIVE%\Users\Public\Pictures\Sample Pictures\*.*"  /Q
+DEL "%SYSTEMDRIVE%\Users\Public\Videos\Sample Videos\*.*"  /Q
+DEL "%windir%\Web\Wallpaper\*.jpg"  /Q  /S
+DEL "%windir%\Web\Wallpaper\Landscapes\*.jpg"  /Q  /S
+RD  "%APPDATA%\360Safe"  /Q  /S
+RD  "%APPDATA%\360se"  /Q  /S
+RD  "%APPDATA%\AiQiSoft"  /Q  /S
+RD  "%APPDATA%\AliWorkbench"  /Q  /S
+RD  "%APPDATA%\AliWorkbench\Update"  /Q  /S
+RD  "%APPDATA%\FlashFXP"  /Q  /S
+RD  "%APPDATA%\Foxit Software\"   /Q  /S
+RD  "%APPDATA%\FreeFileSync\Logs"  /Q  /S
+RD  "%APPDATA%\HD Tune Pro\"   /Q  /S
+RD  "%APPDATA%\KunlunInput\"   /Q  /S
+RD  "%APPDATA%\Kunlun\"   /Q  /S
+RD  "%APPDATA%\LDSGameCenter"  /Q  /S
+RD  "%APPDATA%\Macromedia\"   /Q  /S
+RD  "%APPDATA%\NVIDIA"  /Q  /S
+RD  "%APPDATA%\PPStream"  /Q  /S
+RD  "%APPDATA%\Tencent"  /Q  /S
+RD  "%APPDATA%\dg\"   /Q  /S
+RD  "%APPDATA%\thunderx\Cache"  /Q  /S
+RD  "%APPDATA%\thunderx\GPUCache"  /Q  /S
+RD  "%APPDATA%\youku"  /Q  /S
+RD  "%HOMEPATH%AppData\Local\Microsoft\Windows\Burn\"  /Q  /S
+RD  "%LOCALAPPDATA%Low\Thunder Network"  /Q  /S
+RD  "%LOCALAPPDATA%\ElevatedDiagnostics"  /Q  /S
+RD  "%LOCALAPPDATA%\Microsoft\Feeds Cache\"  /Q  /S
+RD  "%LOCALAPPDATA%\Temp"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Temp"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\360Safe"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\360se"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\FlashFXP"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\KuGou8"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\PPStream"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\Tencent"  /Q  /S
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\Thunder Network"  /Q  /S
 
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\360Safe" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\360se" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\FlashFXP" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\PPStream" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\Tencent" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\KuGou8" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Roaming\Thunder Network" /Q /S
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Temp" /Q /S
-
-DEL "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Caches\*.*" /q
-DEL "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Explorer\*.*" /q
-
-DEL "%SYSTEMDRIVE%\Users\Public\Music\Sample Music\*.*" /q
-DEL "%SYSTEMDRIVE%\Users\Public\Videos\Sample Videos\*.*" /q
-DEL "%SYSTEMDRIVE%\Users\Public\Pictures\Sample Pictures\*.*" /q
-
-DEL "%windir%\Web\Wallpaper\*.jpg" /Q /S
-DEL "%windir%\Web\Wallpaper\Landscapes\*.jpg" /Q /S
-
-RD  "%APPDATA%\dg\"  /Q /S
-RD  "%APPDATA%\Kunlun\"  /Q /S
-RD  "%APPDATA%\KunlunInput\"  /Q /S
-RD  "%APPDATA%\Macromedia\"  /Q /S
-RD  "%APPDATA%\HD Tune Pro\"  /Q /S
-RD  "%APPDATA%\Foxit Software\"  /Q /S
-RD  "%APPDATA%\Macromedia\"  /Q /S
-RD  "%APPDATA%\Macromedia\"  /Q /S
-DEL "%HOMEPATH%\AppData\Local\Microsoft\Windows\Explorer\*.*" /Q /S
-DEL "%HOMEPATH%\AppData\Local\Microsoft\Windows\Cache\*.*" /Q /S
-RD  "%HOMEPATH%AppData\Local\Microsoft\Windows\Burn\" /Q /S
-
-rem Win8 æ— ç”¨æ–‡ä»¶æ¸…ç†
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\WebCache\" /s /q
-RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Temporary Internet Files\" /s /q
-RD  "%APPDATA%\Local\Microsoft\Windows\WebCache\" /s /q
-RD  "%APPDATA%\Local\Microsoft\Windows\Temporary Internet Files\" /s /q
-RD  "%windir%\CbsTemp" /s /q
-
-
-ECHO.
-ECHO	æ¸…ç©ºå›æ”¶ç«™
-RD  %SYSTEMDRIVE%\RECYCLER\* /Q /S
-RD  c:\RECYCLER\ /Q /S
-RD  d:\RECYCLER\ /Q /S
-RD  e:\RECYCLER\ /Q /S
-RD  f:\RECYCLER\ /Q /S
-RD  c:\$Recycle.Bin\ /Q /S
-RD  d:\$Recycle.Bin\ /Q /S
-RD  e:\$Recycle.Bin\ /Q /S
-RD  f:\$Recycle.Bin\ /Q /S
-
-ECHO.
-ECHO	æ¸…é™¤ Cookies
-DEL "%appdata%\Microsoft\Windows\Cookies\*.*" /f /s /q
-
-ECHO.
-ECHO	å¼€å§‹èœå•
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\Windows Catalog.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\Windows Update.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\è®¾å®šç¨‹åºè®¿é—®å’Œé»˜è®¤å€¼.lnk"
-DEL "E:\admin\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\Windows Media Player.lnk"
-DEL "E:\admin\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\Outlook Express.lnk"
-
-ECHO.
-ECHO	ç§»åŠ¨å¼€å§‹èœå•çš„ä¸€äº›å¿«æ·æ–¹å¼
-DEL "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æ¼«æ¸¸ Windows XP.lnk"
-
-move "%SYSTEMDRIVE%\Documents and Settings\Default User\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\è¿œç¨‹ååŠ©.lnk" "%SYSTEMDRIVE%\Documents and Settings\Default User\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\è¿œç¨‹ååŠ©.lnk"
-move "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\è¿œç¨‹ååŠ©.lnk" "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\è¿œç¨‹ååŠ©.lnk" /y
-move "%SYSTEMDRIVE%\Documents and Settings\Administrator\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\è¿œç¨‹ååŠ©.lnk" "%SYSTEMDRIVE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\è¿œç¨‹ååŠ©.lnk"
-move "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\è¿œç¨‹ååŠ©.lnk" "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\è¿œç¨‹ååŠ©.lnk"
-move "E:\admin\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\è¿œç¨‹ååŠ©.lnk" "E:\admin\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\è¿œç¨‹ååŠ©.lnk"
-move "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\Windows Movie Maker.lnk" "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\å¨±ä¹\Windows Movie Maker.lnk"
-move "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\Windows Movie Maker.lnk" "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\å¨±ä¹\Windows Movie Maker.lnk"
+REM Win8 ÎŞÓÃÎÄ¼şÇåÀí
+RD  "%APPDATA%\Microsoft\Windows\Temporary Internet Files\"  /S  /Q
+RD  "%APPDATA%\Microsoft\Windows\WebCache\"  /S  /Q
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Temporary Internet Files\"  /S  /Q
+RD  "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\WebCache\"  /S  /Q
+RD  "%windir%\CbsTemp"  /S  /Q
 
 
 ECHO.
-ECHO	å¤åˆ¶éŸ³é‡æ§åˆ¶å¿«æ·æ–¹å¼åˆ°å¿«é€Ÿå¯åŠ¨æ 
-xcopy "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\é™„ä»¶\å¨±ä¹\éŸ³é‡æ§åˆ¶.lnk" "%APPDATA%\Microsoft\Internet Explorer\Quick Launch\" /y
+ECHO	Çå¿Õ»ØÊÕÕ¾
+RD  %SYSTEMDRIVE%\RECYCLER\*  /Q  /S
+RD  c:\$Recycle.Bin\  /Q  /S
+RD  c:\RECYCLER\  /Q  /S
+RD  d:\$Recycle.Bin\  /Q  /S
+RD  d:\RECYCLER\  /Q  /S
+RD  e:\$Recycle.Bin\  /Q  /S
+RD  e:\RECYCLER\  /Q  /S
+RD  f:\$Recycle.Bin\  /Q  /S
+RD  f:\RECYCLER\  /Q  /S
+RD  g:\$Recycle.Bin\  /Q  /S
+RD  g:\RECYCLER\  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç†XPè‡ªå¸¦çš„å¢™çº¸
+ECHO	Çå³ı Cookies
+DEL "%appdata%\Microsoft\Windows\Cookies\*.*" /f  /S  /Q
+
+ECHO.
+ECHO	¿ªÊ¼²Ëµ¥
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\Windows Catalog.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\Windows Update.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\Éè¶¨³ÌĞò·ÃÎÊºÍÄ¬ÈÏÖµ.lnk"
+DEL "E:\admin\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Outlook Express.lnk"
+DEL "E:\admin\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Windows Media Player.lnk"
+
+ECHO.
+ECHO	ÒÆ¶¯¿ªÊ¼²Ëµ¥µÄÒ»Ğ©¿ì½İ·½Ê½
+DEL "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ÂşÓÎ Windows XP.lnk"
+
+move "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Windows Movie Maker.lnk" "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\ÓéÀÖ\Windows Movie Maker.lnk"
+move "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ô¶³ÌĞ­Öú.lnk" "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\Ô¶³ÌĞ­Öú.lnk"
+move "%SYSTEMDRIVE%\Documents and Settings\Administrator\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ô¶³ÌĞ­Öú.lnk" "%SYSTEMDRIVE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\Ô¶³ÌĞ­Öú.lnk"
+move "%SYSTEMDRIVE%\Documents and Settings\Default User\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ô¶³ÌĞ­Öú.lnk" "%SYSTEMDRIVE%\Documents and Settings\Default User\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\Ô¶³ÌĞ­Öú.lnk"
+move "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Windows Movie Maker.lnk" "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\ÓéÀÖ\Windows Movie Maker.lnk"
+move "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ô¶³ÌĞ­Öú.lnk" "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\Ô¶³ÌĞ­Öú.lnk" /y
+move "E:\admin\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ô¶³ÌĞ­Öú.lnk" "E:\admin\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\Ô¶³ÌĞ­Öú.lnk"
+
+
+ECHO.
+ECHO	¸´ÖÆÒôÁ¿¿ØÖÆ¿ì½İ·½Ê½µ½¿ìËÙÆô¶¯À¸
+xcopy "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\¸½¼ş\ÓéÀÖ\ÒôÁ¿¿ØÖÆ.lnk" "%APPDATA%\Microsoft\Internet Explorer\Quick Launch\" /y
+
+ECHO.
+ECHO	ÇåÀíXP×Ô´øµÄÇ½Ö½
 DEL "%WINDIR%\web\Wallpaper\*.jpg"
 DEL "%WINDIR%\web\Wallpaper\Bliss.bmp"
 DEL "%WINDIR%\web\Wallpaper\Windows\auney.jpg"
 
-ECHO	æ¸…ç†å¤‡ä»½OEM LOGO
+ECHO	ÇåÀí±¸·İOEM LOGO
 DEL  "%WINDIR%\system32\oemlogo_bak.bmp"
 
 ECHO.
-ECHO	æ¸…ç† MaxDOS è‡ªå¸¦æµè§ˆå™¨æ’ä»¶
+ECHO	ÇåÀí MaxDOS ×Ô´øä¯ÀÀÆ÷²å¼ş
 DEL "%WINDIR%\system32\BBN_iCafe_071210.dll"
 DEL "D:\MaxDOS\bd.exe"
 net stop knlrun
 sc config knlrun start= Disabled
 
 ECHO.
-ECHO	æ¸…ç† æœç‹—è¾“å…¥æ³• æ— ç”¨æ–‡ä»¶
-RD  "%ProgramFiles%\SogouExtension\" /Q /S
-DEL "%ProgramFiles%\SogouInput\*.url" /s
-RD  "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\é“¾æ¥" /s /q
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\å¸®åŠ©.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\æ‰“å­—å…¥é—¨.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\å®˜æ–¹è®ºå›.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\å®˜æ–¹ç½‘ç«™.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\çš®è‚¤ä¸‹è½½.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\ç»†èƒè¯åº“.lnk"
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æœç‹—æ‹¼éŸ³è¾“å…¥æ³•\æ„è§åé¦ˆ.lnk"
-DEL "%ProgramFiles%\SogouInput\*.log" /s
-DEL "%ProgramFiles%\SogouInput\*.url" /s
-DEL "%ProgramFiles%\SogouInput\*.dmp" /s
-DEL "%ProgramFiles%\SogouInput\errorlog.txt" /s
-DEL "%ProgramFiles%\SogouInput\OlympicNews.exe" /s
-DEL "%ProgramFiles%\SogouInput\SohuNews.exe" /s /f
-DEL "E:\Program Files (x86)\SogouInput\SohuNews.exe" /s /f
-DEL "%ProgramFiles%\SogouInput\SogouFlash.exe" /s
-DEL "%ProgramFiles%\SogouInput\SkinReg.exe" /s
-DEL "%ProgramFiles%\SogouInput\userNetSchedule.exe" /s
-DEL "%ProgramFiles%\SogouInput\PinyinUp.exe" /s
-DEL "%ProgramFiles%\SogouInput\crashrpt.exe" /s
-DEL "%ProgramFiles%\SogouInput\SkinRecommend.ini" /s
-DEL "%ProgramFiles%\SogouInput\FlashSkinPreview.ini" /s
-DEL "%ProgramFiles%\SogouInput\SogouCloud.exe" /s
-DEL "%ProgramFiles%\SogouInput\urlBaseG.enc" /s
-DEL "%ProgramFiles%\SogouInput\urlguide.enc" /s
-DEL "%ProgramFiles%\SogouInput\sogoupy.zip" /s
+ECHO	ÇåÀí ËÑ¹·ÊäÈë·¨ ÎŞÓÃÎÄ¼ş
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\¹Ù·½ÍøÕ¾.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\¹Ù·½ÂÛÌ³.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\°ïÖú.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\Òâ¼û·´À¡.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\´ò×ÖÈëÃÅ.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\Æ¤·ôÏÂÔØ.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\Ï¸°û´Ê¿â.lnk"
+DEL "%ProgramFiles% (x86)\SogouInput\*.dmp"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\*.log"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\*.url"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\FlashSkinPreview.ini"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\OlympicNews.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\PinyinUp.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\SkinRecommend.ini"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\SkinReg.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\SogouCloud.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\SogouFlash.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\SohuNews.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\crashrpt.exe"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\errorlog.txt"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\sogoupy.zip"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\urlBaseG.enc"  /S
+DEL "%ProgramFiles% (x86)\SogouInput\urlguide.enc"  /S  /Q
+DEL "%ProgramFiles% (x86)\SogouInput\userNetSchedule.exe"  /S
+DEL "%ProgramFiles%\SogouInput\*.dmp"  /S
+DEL "%ProgramFiles%\SogouInput\*.log"  /S
+DEL "%ProgramFiles%\SogouInput\*.url"  /S
+DEL "%ProgramFiles%\SogouInput\FlashSkinPreview.ini"  /S
+DEL "%ProgramFiles%\SogouInput\OlympicNews.exe"  /S
+DEL "%ProgramFiles%\SogouInput\PinyinUp.exe"  /S
+DEL "%ProgramFiles%\SogouInput\SkinRecommend.ini"  /S
+DEL "%ProgramFiles%\SogouInput\SkinReg.exe"  /S
+DEL "%ProgramFiles%\SogouInput\SogouCloud.exe"  /S
+DEL "%ProgramFiles%\SogouInput\SogouFlash.exe"  /S
+DEL "%ProgramFiles%\SogouInput\SohuNews.exe"  /S /F
+DEL "%ProgramFiles%\SogouInput\crashrpt.exe"  /S
+DEL "%ProgramFiles%\SogouInput\errorlog.txt"  /S
+DEL "%ProgramFiles%\SogouInput\sogoupy.zip"  /S
+DEL "%ProgramFiles%\SogouInput\urlBaseG.enc"  /S
+DEL "%ProgramFiles%\SogouInput\urlguide.enc"  /S
+DEL "%ProgramFiles%\SogouInput\userNetSchedule.exe"  /S
+DEL "E:\Program Files (x86)\SogouInput\*.url"  /S /F
+DEL "E:\Program Files (x86)\SogouInput\SohuNews.exe"  /S /F
+RD  "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\ËÑ¹·Æ´ÒôÊäÈë·¨\Á´½Ó"  /S  /Q
+RD  "%ProgramFiles%\SogouExtension\"  /Q  /S
 
-DEL "%ProgramFiles% (x86)\SogouInput\*.log" /s
-DEL "%ProgramFiles% (x86)\SogouInput\*.url" /s
-DEL "%ProgramFiles% (x86)\SogouInput\*.dmp" /s
-DEL "%ProgramFiles% (x86)\SogouInput\errorlog.txt" /s
-DEL "%ProgramFiles% (x86)\SogouInput\OlympicNews.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\SohuNews.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\SogouFlash.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\SkinReg.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\userNetSchedule.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\PinyinUp.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\crashrpt.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\SkinRecommend.ini" /s
-DEL "%ProgramFiles% (x86)\SogouInput\FlashSkinPreview.ini" /s
-DEL "%ProgramFiles% (x86)\SogouInput\SogouCloud.exe" /s
-DEL "%ProgramFiles% (x86)\SogouInput\urlBaseG.enc" /s
-DEL "%ProgramFiles% (x86)\SogouInput\urlguide.enc" /s /q
-DEL "%ProgramFiles% (x86)\SogouInput\sogoupy.zip" /s
 
+ECHO	ÇåÀí ËÑ¹·ÊäÈë·¨ ÎŞÓÃÎÄ¼ş
+DEL "%ProgramFiles% (x86)\SogouWBInput\*.url"  /S
+RD  "%ProgramFiles% (x86)\SogouWBInput\*\ErrorLog\"  /Q  /S
 
-ECHO	æ¸…ç† æœç‹—è¾“å…¥æ³• æ— ç”¨æ–‡ä»¶
-DEL "%ProgramFiles% (x86)\SogouWBInput\*.url" /s
-RD  "%ProgramFiles% (x86)\SogouWBInput\*\ErrorLog\" /Q /S
+RD  "%ProgramFiles% (x86)\Tools\"  /Q  /S
 
-RD  "%ProgramFiles% (x86)\Tools\" /Q /S
-
-ECHO	åˆ é™¤ä»–å›½è¯­è¨€ç©ºæ–‡ä»¶å¤¹
+ECHO	É¾³ıËû¹úÓïÑÔ¿ÕÎÄ¼ş¼Ğ
 RD  "%WINDIR%\system32\1025"
 RD  "%WINDIR%\system32\1028"
 RD  "%WINDIR%\system32\1031"
@@ -264,27 +269,27 @@ RD  "%WINDIR%\system32\1042"
 RD  "%WINDIR%\system32\1054"
 RD  "%WINDIR%\system32\3076"
 
-ECHO	åˆ é™¤ boot ä»–å›½è¯­è¨€
-RD  "%SYSTEMDRIVE%\boot\cs-CZ" /Q /S
-RD  "%SYSTEMDRIVE%\boot\da-DK" /Q /S
-RD  "%SYSTEMDRIVE%\boot\de-DE" /Q /S
-RD  "%SYSTEMDRIVE%\boot\el-GR" /Q /S
-RD  "%SYSTEMDRIVE%\boot\fi-FI" /Q /S
-RD  "%SYSTEMDRIVE%\boot\hu-HU" /Q /S
-RD  "%SYSTEMDRIVE%\boot\it-IT" /Q /S
-RD  "%SYSTEMDRIVE%\boot\ja-JP" /Q /S
-RD  "%SYSTEMDRIVE%\boot\ko-KR" /Q /S
-RD  "%SYSTEMDRIVE%\boot\nb-NO" /Q /S
-RD  "%SYSTEMDRIVE%\boot\nl-NL" /Q /S
-RD  "%SYSTEMDRIVE%\boot\pl-PL" /Q /S
-RD  "%SYSTEMDRIVE%\boot\pt-BR" /Q /S
-RD  "%SYSTEMDRIVE%\boot\pt-PT" /Q /S
-RD  "%SYSTEMDRIVE%\boot\ru-RU" /Q /S
-RD  "%SYSTEMDRIVE%\boot\sv-SE" /Q /S
-RD  "%SYSTEMDRIVE%\boot\tr-TR" /Q /S
-RD  "%SYSTEMDRIVE%\boot\es-ES" /Q /S
-RD  "%SYSTEMDRIVE%\boot\zh-TW" /Q /S
-RD  "%SYSTEMDRIVE%\boot\zh-HK" /Q /S
+ECHO	É¾³ı boot Ëû¹úÓïÑÔ
+RD  "%SYSTEMDRIVE%\boot\cs-CZ"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\da-DK"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\de-DE"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\el-GR"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\es-ES"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\fi-FI"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\hu-HU"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\it-IT"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\ja-JP"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\ko-KR"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\nb-NO"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\nl-NL"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\pl-PL"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\pt-BR"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\pt-PT"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\ru-RU"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\sv-SE"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\tr-TR"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\zh-HK"  /Q  /S
+RD  "%SYSTEMDRIVE%\boot\zh-TW"  /Q  /S
 
 DEL "%SYSTEMDRIVE%\Boot\Fonts\jpn_boot.ttf"
 DEL "%SYSTEMDRIVE%\Boot\Fonts\kor_boot.ttf"
@@ -293,47 +298,49 @@ DEL "%SYSTEMDRIVE%\Boot\Fonts\cht_boot.ttf"
 
 
 ECHO.
-ECHO	æ¸…ç†å¤šä½™å±å¹•ä¿æŠ¤ç¨‹åº
-DEL "%WINDIR%\system32\scrnsave.scr" /q /f
-DEL "%WINDIR%\system32\ss3dfo.scr" /q /f
-DEL "%WINDIR%\system32\ssbezier.scr" /q /f
-DEL "%WINDIR%\system32\ssflwbox.scr" /q /f
-DEL "%WINDIR%\system32\ssmarque.scr" /q /f
-DEL "%WINDIR%\system32\ssmyst.scr" /q /f
-DEL "%WINDIR%\system32\sspipes.scr" /q /f
-DEL "%WINDIR%\system32\ssstars.scr" /q /f
-DEL "%WINDIR%\system32\sstext3d.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\scrnsave.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ss3dfo.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ssbezier.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ssflwbox.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ssmarque.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ssmyst.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\sspipes.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\ssstars.scr" /q /f
-DEL "%WINDIR%\system32\dllcache\sstext3d.scr" /q /f
+ECHO	ÇåÀí¶àÓàÆÁÄ»±£»¤³ÌĞò
+DEL "%WINDIR%\system32\dllcache\scrnsave.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ss3dfo.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ssbezier.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ssflwbox.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ssmarque.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ssmyst.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\sspipes.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\ssstars.scr"  /Q /f
+DEL "%WINDIR%\system32\dllcache\sstext3d.scr"  /Q /f
+DEL "%WINDIR%\system32\scrnsave.scr"  /Q /f
+DEL "%WINDIR%\system32\ss3dfo.scr"  /Q /f
+DEL "%WINDIR%\system32\ssbezier.scr"  /Q /f
+DEL "%WINDIR%\system32\ssflwbox.scr"  /Q /f
+DEL "%WINDIR%\system32\ssmarque.scr"  /Q /f
+DEL "%WINDIR%\system32\ssmyst.scr"  /Q /f
+DEL "%WINDIR%\system32\sspipes.scr"  /Q /f
+DEL "%WINDIR%\system32\ssstars.scr"  /Q /f
+DEL "%WINDIR%\system32\sstext3d.scr"  /Q /f
 
-ECHO	åˆ é™¤è‡ªåŠ¨æ›´æ–°ç¨‹åº
+ECHO	É¾³ı×Ô¶¯¸üĞÂ³ÌĞò
 DEL "%WINDIR%\system32\wuauclt.exe"
 DEL "%WINDIR%\system32\wuauclt1.exe"
 DEL "%WINDIR%\system32\dllcache\wuauclt.exe"
 DEL "%WINDIR%\system32\dllcache\wuauclt1.exe"
 
 ECHO.
-ECHO	æ¸…ç†å¤šä½™å¸®åŠ©
+ECHO	ÇåÀí¶àÓà°ïÖú
 rename "%WINDIR%\Help\agt0804.hlp" agt0804_.hlp
 DEL "%WINDIR%\Help\agt*.hlp"
 rename "%WINDIR%\Help\agt0804_.hlp" agt0804.hlp
 
 ECHO.
-ECHO	æ¸…ç†å¤šä½™è¾“å…¥æ³•  ç¹ä½“ä¸­æ–‡è¾“å…¥æ³•
-RD  "%WINDIR%\ime\CHTIME" /Q /S
+ECHO	ÇåÀí¶àÓàÊäÈë·¨  ·±ÌåÖĞÎÄÊäÈë·¨
+RD  "%WINDIR%\ime\CHTIME"  /Q  /S
 DEL "%WINDIR%\system32\dllcache\hwxcht.dll"
 
-ECHO	IMJP8_1 æ—¥æ–‡è¾“å…¥æ³•
-RD  "%WINDIR%\ime\IMJP8_1" /Q /S 
+ECHO	IMJP8_1 ÈÕÎÄÊäÈë·¨
 DEL "%WINDIR%\system32\dllcache\cplexe.exe"
+DEL "%WINDIR%\system32\dllcache\imjpcic.dll"
+DEL "%WINDIR%\system32\dllcache\imjpcus.dll"
 DEL "%WINDIR%\system32\dllcache\imjpdadm.exe"
+DEL "%WINDIR%\system32\dllcache\imjpdct.dll"
 DEL "%WINDIR%\system32\dllcache\imjpdct.exe"
 DEL "%WINDIR%\system32\dllcache\imjpdsvr.exe"
 DEL "%WINDIR%\system32\dllcache\imjpinst.exe"
@@ -341,10 +348,8 @@ DEL "%WINDIR%\system32\dllcache\imjpmig.exe"
 DEL "%WINDIR%\system32\dllcache\imjprw.exe"
 DEL "%WINDIR%\system32\dllcache\imjpuex.exe"
 DEL "%WINDIR%\system32\dllcache\imjputy.exe"
-DEL "%WINDIR%\system32\dllcache\imjpcic.dll"
-DEL "%WINDIR%\system32\dllcache\imjpcus.dll"
-DEL "%WINDIR%\system32\dllcache\imjpdct.dll"
 DEL "%WINDIR%\system32\dllcache\imjputyc.dll"
+RD  "%WINDIR%\ime\IMJP8_1"  /Q  /S 
 
 ECHO	IMJP8_1\APPLETS
 DEL "%WINDIR%\system32\dllcache\hwxjpn.dll"
@@ -356,7 +361,7 @@ DEL "%WINDIR%\system32\dllcache\voicepad.dll"
 DEL "%WINDIR%\system32\dllcache\voicesub.dll"
 
 ECHO	IMKR6_1
-RD  "%WINDIR%\ime\IMKR6_1" /Q /S 
+RD  "%WINDIR%\ime\IMKR6_1"  /Q  /S 
 DEL "%WINDIR%\system32\dllcache\imekrmig.exe"
 DEL "%WINDIR%\system32\dllcache\imkrinst.exe"
 DEL "%WINDIR%\system32\dllcache\imekrcic.dll"
@@ -371,37 +376,37 @@ DEL "%WINDIR%\system32\dllcache\hanja.lex"
 DEL "%WINDIR%\system32\dllcache\imekr.lex"
 
 ECHO Win7 IME
-RD  "%WINDIR%\IME\IMEJP10" /S /Q
-RD  "%WINDIR%\IME\IMETC10" /S /Q
+RD  "%WINDIR%\IME\IMEJP10"  /S  /Q
+RD  "%WINDIR%\IME\IMETC10"  /S  /Q
 
 
 
-ECHO æ˜¾å¡ç›¸å…³æ–‡ä»¶
-DEL "%WINDIR%\system32\igfxr*.lrc" /q
-DEL "%WINDIR%\system32\drivers\igfxr*.lrc" /Q /S
+ECHO ÏÔ¿¨Ïà¹ØÎÄ¼ş
+DEL "%WINDIR%\system32\igfxr*.lrc"  /Q
+DEL "%WINDIR%\system32\drivers\igfxr*.lrc"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç†ç³»ç»Ÿè¡¥ä¸å¤‡ä»½
-RD  %WINDIR%\$hf_mig$ /q /q
+ECHO	ÇåÀíÏµÍ³²¹¶¡±¸·İ
+RD  %WINDIR%\$hf_mig$  /Q  /Q
 
-ECHO	æ¸…ç† Prefetch æ–‡ä»¶å¤¹
-DEL "%WINDIR%\Prefetch\*.*" /q /f
-
-
-ECHO	æ¸…ç† Windows7 å¯åŠ¨é¡¹
-DEL "%USERPROFILE%\Start Menu\*26885.com*" /Q /S
-DEL "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\*26885.com*" /Q /S
+ECHO	ÇåÀí Prefetch ÎÄ¼ş¼Ğ
+DEL "%WINDIR%\Prefetch\*.*"  /Q /f
 
 
+ECHO	ÇåÀí Windows7 Æô¶¯Ïî
+DEL "%USERPROFILE%\Start Menu\*.com*"  /Q  /S
+DEL "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\*.com*"  /Q  /S
 
-ECHO å¤šä½™çš„å£°å¡åº”ç”¨ç¨‹åº
+
+
+ECHO ¶àÓàµÄÉù¿¨Ó¦ÓÃ³ÌĞò
 DEL "%WINDIR%\ALCMTR.EXE" /f
 DEL "%WINDIR%\ALCWZRD.EXE" /f
 DEL "%WINDIR%\RtlUpd.exe" /f
-DEL "%WINDIR%\SkyTel.exe" /f
 DEL "%WINDIR%\SOUNDMAN.EXE" /f
+DEL "%WINDIR%\SkyTel.exe" /f
 
-ECHO	æ¸…ç† Windows è‡ªå¸¦ BMP å¢™çº¸
+ECHO	ÇåÀí Windows ×Ô´ø BMP Ç½Ö½
 DEL "%WINDIR%\Blue Lace 16.bmp"
 DEL "%WINDIR%\Coffee Bean.bmp"
 DEL "%WINDIR%\FeatherTexture.bmp"
@@ -415,228 +420,231 @@ DEL "%WINDIR%\Soap Bubbles.bmp"
 DEL "%WINDIR%\Zapotec.bmp"
 
 ECHO.
-ECHO	æ¸…ç†å¿«é€Ÿå¯åŠ¨æ å›¾æ ‡
+ECHO	ÇåÀí¿ìËÙÆô¶¯À¸Í¼±ê
 DEL "%APPDATA%\Microsoft\Internet Explorer\Quick Launch\Windows Media Player.lnk"
-DEL "%APPDATA%\Microsoft\Internet Explorer\Quick Launch\å› ç‰¹ç½‘æœç´¢.lnk"
+DEL "%APPDATA%\Microsoft\Internet Explorer\Quick Launch\ÒòÌØÍøËÑË÷.lnk"
 
 ECHO.
-ECHO	æ¸…ç†IEæ”¶è—å¤¹åŸå§‹æ¡ç›®
-DEL "%USERPROFILE%\Favorites\MSN.com.url"
-DEL "%USERPROFILE%\Favorites\ç”µå°æŒ‡å—.url"
-DEL "%USERPROFILE%\Favorites\é“¾æ¥\Windows Media.url"
-DEL "%USERPROFILE%\Favorites\é“¾æ¥\windows.url"
-DEL "%USERPROFILE%\Favorites\é“¾æ¥\å…è´¹ Hotmail.url"
-DEL "%USERPROFILE%\Favorites\é“¾æ¥\è‡ªå®šä¹‰é“¾æ¥.url"
+ECHO	ÇåÀíIEÊÕ²Ø¼ĞÔ­Ê¼ÌõÄ¿
 DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\MSN.com.url"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\ç”µå°æŒ‡å—.url"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\é“¾æ¥\Windows Media.url"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\é“¾æ¥\windows.url"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\é“¾æ¥\å…è´¹ Hotmail.url"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\é“¾æ¥\è‡ªå®šä¹‰é“¾æ¥.url"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\µçÌ¨Ö¸ÄÏ.url"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\Á´½Ó\Windows Media.url"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\Á´½Ó\windows.url"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\Á´½Ó\Ãâ·Ñ Hotmail.url"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Favorites\Á´½Ó\×Ô¶¨ÒåÁ´½Ó.url"
+DEL "%USERPROFILE%\Favorites\MSN.com.url"
+DEL "%USERPROFILE%\Favorites\µçÌ¨Ö¸ÄÏ.url"
+DEL "%USERPROFILE%\Favorites\Á´½Ó\Windows Media.url"
+DEL "%USERPROFILE%\Favorites\Á´½Ó\windows.url"
+DEL "%USERPROFILE%\Favorites\Á´½Ó\Ãâ·Ñ Hotmail.url"
+DEL "%USERPROFILE%\Favorites\Á´½Ó\×Ô¶¨ÒåÁ´½Ó.url"
 
-DEL "%USERPROFILE%\Local Settings\Temp\*.*" /Q /S
-DEL "%USERPROFILE%\Local Settings\History\*" /Q /S
-DEL "%USERPROFILE%\Recent\*.lnk" /q
-DEL "%APPDATA%\Roaming\Microsoft\Windows\Recent\*.lnk" /q
+DEL "%USERPROFILE%\Local Settings\Temp\*.*"  /Q  /S
+DEL "%USERPROFILE%\Local Settings\History\*"  /Q  /S
+DEL "%USERPROFILE%\Recent\*.lnk"  /Q
+DEL "%APPDATA%\Roaming\Microsoft\Windows\Recent\*.lnk"  /Q
 
-ECHO	æ¸…ç†WIN7 IEæ”¶è—å¤¹åŸå§‹æ¡ç›®
-RD  "%USERPROFILE%\Favorites\Microsoft ç½‘ç«™" /Q /S
-RD  "%USERPROFILE%\Favorites\MSN ç½‘ç«™" /Q /S
-RD  "%USERPROFILE%\Favorites\Windows Live" /Q /S
-RD  "E%USERPROFILE%\Favorites\Links for ä¸­å›½" /Q /S
-RD  "E:\admin\Favorites\Microsoft ç½‘ç«™" /Q /S
-RD  "E:\admin\Favorites\MSN ç½‘ç«™" /Q /S
-RD  "E:\admin\Favorites\Windows Live" /Q /S
-RD  "E:\admin\Favorites\Links for ä¸­å›½" /Q /S
+ECHO	ÇåÀíWIN7 IEÊÕ²Ø¼ĞÔ­Ê¼ÌõÄ¿
+RD  "%USERPROFILE%\Favorites\MSN ÍøÕ¾"  /Q  /S
+RD  "%USERPROFILE%\Favorites\Microsoft ÍøÕ¾"  /Q  /S
+RD  "%USERPROFILE%\Favorites\Windows Live"  /Q  /S
+RD  "E%USERPROFILE%\Favorites\Links for ÖĞ¹ú"  /Q  /S
+RD  "E:\admin\Favorites\Links for ÖĞ¹ú"  /Q  /S
+RD  "E:\admin\Favorites\MSN ÍøÕ¾"  /Q  /S
+RD  "E:\admin\Favorites\Microsoft ÍøÕ¾"  /Q  /S
+RD  "E:\admin\Favorites\Windows Live"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç†å¤šä½™é¼ æ ‡æŒ‡é’ˆ
-RD  "%WINDIR%\Cursors\" /Q /S
+ECHO	ÇåÀí¶àÓàÊó±êÖ¸Õë
+RD  "%WINDIR%\Cursors\"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç† Program Files å¤šä½™æ–‡ä»¶
-RD  "%CommonProgramFiles%\Real\Update_OB\" /Q /S
-RD  "%ProgramFiles%\LtUcx\" /Q /S
-RD  "%ProgramFiles%\NVIDIA Corporation\Installer2\" /Q /S
+ECHO	ÇåÀí Program Files ¶àÓàÎÄ¼ş
+RD  "%CommonProgramFiles%\Real\Update_OB\"  /Q  /S
+RD  "%ProgramFiles%\LtUcx\"  /Q  /S
+RD  "%ProgramFiles%\NVIDIA Corporation\Installer2\"  /Q  /S
 
 
 ECHO.
 COLOR18
-ECHO	ä¸‹é¢å¼€å§‹æ¸…ç†ä¸€äº›è½¯ä»¶çš„ç›¸å…³ä¿¡æ¯
+ECHO	ÏÂÃæ¿ªÊ¼ÇåÀíÒ»Ğ©Èí¼şµÄÏà¹ØĞÅÏ¢
 
-ECHO	æ¸…ç†æ˜“è¶£å¿«æ·æ–¹å¼
+ECHO	ÇåÀíÒ×È¤¿ì½İ·½Ê½
 DEL "%WINDIR%\MTInstaller.exe"
-DEL "%USERPROFILE%\æ¡Œé¢\æ˜“è¶£è´­ç‰©.lnk"
-DEL "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\æ˜“è¶£è´­ç‰©.lnk"
-RD  "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æ˜“è¶£è´­ç‰©"
+DEL "%USERPROFILE%\×ÀÃæ\Ò×È¤¹ºÎï.lnk"
+DEL "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\Ò×È¤¹ºÎï.lnk"
+RD  "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ò×È¤¹ºÎï"
 
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\ã€Œå¼€å§‹ã€èœå•\æ˜“è¶£è´­ç‰©.lnk"
-DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\æ¡Œé¢\æ˜“è¶£è´­ç‰©.lnk"
-RD  "%SYSTEMDRIVE%\Documents and Settings\Default User\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\æ˜“è¶£è´­ç‰©" /s /q
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\¡¸¿ªÊ¼¡¹²Ëµ¥\Ò×È¤¹ºÎï.lnk"
+DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\×ÀÃæ\Ò×È¤¹ºÎï.lnk"
+RD  "%SYSTEMDRIVE%\Documents and Settings\Default User\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\Ò×È¤¹ºÎï"  /S  /Q
 
-DEL "%ALLUSERSPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\ç´«å…‰æ‹¼éŸ³è¾“å…¥æ³• 3.0\å› ç‰¹ç½‘æœç´¢.lnk"
-DEL "%USERPROFILE%\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\ç´«å…‰æ‹¼éŸ³è¾“å…¥æ³• 3.0\å› ç‰¹ç½‘æœç´¢.lnk"
+DEL "%ALLUSERSPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\×Ï¹âÆ´ÒôÊäÈë·¨ 3.0\ÒòÌØÍøËÑË÷.lnk"
+DEL "%USERPROFILE%\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\×Ï¹âÆ´ÒôÊäÈë·¨ 3.0\ÒòÌØÍøËÑË÷.lnk"
 
 
 
-RD  "%SYSTEMDRIVE%\Documents and Settings\Default User\ã€Œå¼€å§‹ã€èœå•\ç¨‹åº\å¸¸ç”¨ç»¿è‰²è½¯ä»¶.lnk"
+RD  "%SYSTEMDRIVE%\Documents and Settings\Default User\¡¸¿ªÊ¼¡¹²Ëµ¥\³ÌĞò\³£ÓÃÂÌÉ«Èí¼ş.lnk"
 DEL "%SYSTEMDRIVE%\Documents and Settings\Default User\Local Settings\Application Data\IconCache.db" /a
 
 
 ECHO Icon Cache
-DEL IconCache.db /Q /S
-DEL "%APPDATA%\IconCache.db" /q /f attributes:h
+DEL IconCache.db  /Q  /S
+DEL "%APPDATA%\IconCache.db"  /Q /f attributes:h
 
 DEL "%CommonProgramFiles%\Macromedia Shared\Service\Macromedia Licensing.exe"
 RD  "%CommonProgramFiles%\Macromedia Shared"
 
 
+RD  "%USERPROFILE%\.android\"  /Q  /S
 
-ECHO	æ¸…ç† ProgramData æ–‡ä»¶å¤¹
-RD  "%ProgramData%\PACE Anti-Piracy\" /Q /S
-RD  "%ProgramData%\PearlMountain\" /Q /S
-RD  "%ProgramData%\FastPictureViewer\" /Q /S
-RD  "%ProgramData%\firebird\" /Q /S
-RD  "%ProgramData%\Axure\" /Q /S
-RD  "%ProgramData%\Microsoft\Windows\Start Menu\Programs\å·¥å…·\" /Q /S
+
+ECHO	ÇåÀí ProgramData ÎÄ¼ş¼Ğ
+RD  "%ProgramData%\Axure\"  /Q  /S
+RD  "%ProgramData%\FastPictureViewer\"  /Q  /S
+RD  "%ProgramData%\Kingsoft\"  /Q  /S
+RD  "%ProgramData%\Microsoft\Windows\Start Menu\Programs\¹¤¾ß\"  /Q  /S
+RD  "%ProgramData%\PACE Anti-Piracy\"  /Q  /S
+RD  "%ProgramData%\PearlMountain\"  /Q  /S
+RD  "%ProgramData%\SogouInput\"  /Q  /S
+RD  "%ProgramData%\firebird\"  /Q  /S
+RD  "%ProgramData%\kdesk\"  /Q  /S
 
 
 ECHO.
-ECHO	æ¸…ç† Zonealarm æ—¥å¿—
+ECHO	ÇåÀí Zonealarm ÈÕÖ¾
 DEL "%WINDIR%\Internet Logs\*.tmp"
 DEL "%WINDIR%\Internet Logs\*.txt"
 DEL "%WINDIR%\Internet Logs\*.zip"
 
-ECHO	æ¸…ç† QQ
-DEL %WINDIR%\63
+ECHO	ÇåÀí QQ
 DEL %WINDIR%\138
-DEL %WINDIR%\804
 DEL %WINDIR%\2388
 DEL %WINDIR%\2702
 DEL %WINDIR%\3075
 DEL %WINDIR%\5166
+DEL %WINDIR%\63
 DEL %WINDIR%\7154
+DEL %WINDIR%\804
 DEL %WINDIR%\8333
 DEL %WINDIR%\9079
 DEL %WINDIR%\9272
 DEL %WINDIR%\9294
 DEL %WINDIR%\9397
-RD  "%APPDATA%\Roaming\QQ" /Q /S
-RD  "%APPDATA%\Roaming\QQUpdate" /Q /S
-RD  "%APPDATA%\Local\Tencent" /Q /S
-RD  "%ProgramData%\QQPet" /Q /S
+RD  "%APPDATA%\Roaming\QQ"  /Q  /S
+RD  "%APPDATA%\Roaming\QQUpdate"  /Q  /S
+RD  "%APPDATA%\Tencent"  /Q  /S
+RD  "%ProgramData%\QQPet"  /Q  /S
 
 
-ECHO æ¸…ç† å¾®ä¿¡
-RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Image\Image" /Q /S
-RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Temp" /Q /S
-RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Thumbnail" /Q /S
-DEL "E:\Users\Admin\Documents\WeChat Files\xepinchan\Attachment\" /Q /S
-DEL "E:\Users\Admin\Documents\WeChat Files\xepinchan\Data\" /Q /S
+ECHO ÇåÀí Î¢ĞÅ
+RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Temp"  /Q  /S
 
 
 ECHO.
-ECHO	æ¸…ç† ESET Smart Security
-RD  "%ProgramData%\ESET\ESET Smart Security\Updfiles\oldfiles" /Q /S
-RD  "%ProgramData%\ESET\ESET Smart Security\Updfiles\temp" /Q /S
-DEL "%ProgramData%\ESET\ESET Smart Security\Installer\3dd.msi" /f /Q /S
-DEL "%ProgramFiles%\ESET\ESET Smart Security\eset.chm" /f /Q /S
-DEL "%ProgramData%\ESET\ESET Smart Security\Updfiles\em*.nup" /f /Q /S
-DEL "%SYSTEMDRIVE%\Users\All Users\ESET\ESET Smart Security\Installer\*.msi" /f /Q /S
-DEL "%SYSTEMDRIVE%\Users\All Users\ESET\ESET Smart Security\Logs\*.*"  /f /Q /S
+ECHO	ÇåÀí ESET Smart Security
+DEL "%ProgramData%\ESET\ESET Smart Security\Installer\3dd.msi" /f  /Q  /S
+DEL "%ProgramData%\ESET\ESET Smart Security\Updfiles\em*.nup" /f  /Q  /S
+DEL "%ProgramFiles%\ESET\ESET Smart Security\eset.chm" /f  /Q  /S
+DEL "%SYSTEMDRIVE%\Users\All Users\ESET\ESET Smart Security\Installer\*.msi" /f  /Q  /S
+DEL "%SYSTEMDRIVE%\Users\All Users\ESET\ESET Smart Security\Logs\*.*"  /f  /Q  /S
+RD  "%ProgramData%\ESET\ESET Smart Security\Updfiles\oldfiles"  /Q  /S
+RD  "%ProgramData%\ESET\ESET Smart Security\Updfiles\temp"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç† TeamViewer
-DEL "%APPDATA%\Roaming\TeamViewer\*.*" /f /Q /S
-DEL "E:\Dropbox\Program\TeamViewer\*.log" /f /Q /S
+ECHO	ÇåÀí TeamViewer
+DEL "%APPDATA%\Roaming\TeamViewer\*.*" /f  /Q  /S
+DEL "E:\Dropbox\Program\TeamViewer\*.log" /f  /Q  /S
 
-ECHO	æ¸…ç† PPStream
-DEL "%APPDATA%\ppStream\adsys\*.*" /f /Q /S
-DEL "%APPDATA%\ppStream\banner\*.*" /f /Q /S
-DEL "%APPDATA%\ppStream\notice\*.*" /f /Q /S
-DEL "%APPDATA%\Roaming\PPStream\adsys\*.*" /f /Q /S
-DEL "%APPDATA%\Roaming\PPStream\banner\*.*" /f /Q /S
-DEL "%APPDATA%\Roaming\PPStream\CLCacher\*.*" /f /Q /S
-DEL "%APPDATA%\Roaming\PPStream\FDSCache\*.*" /f /Q /S
-DEL "%APPDATA%\Roaming\PPStream\VodCache\*.*" /f /Q /S
+ECHO	ÇåÀí PPStream
+DEL "%APPDATA%\Roaming\PPStream\CLCacher\*.*" /f  /Q  /S
+DEL "%APPDATA%\Roaming\PPStream\FDSCache\*.*" /f  /Q  /S
+DEL "%APPDATA%\Roaming\PPStream\VodCache\*.*" /f  /Q  /S
+DEL "%APPDATA%\Roaming\PPStream\adsys\*.*" /f  /Q  /S
+DEL "%APPDATA%\Roaming\PPStream\banner\*.*" /f  /Q  /S
+DEL "%APPDATA%\ppStream\adsys\*.*" /f  /Q  /S
+DEL "%APPDATA%\ppStream\banner\*.*" /f  /Q  /S
+DEL "%APPDATA%\ppStream\notice\*.*" /f  /Q  /S
 
-ECHO	æ¸…ç† è¿…é›·
-RD  "%ProgramData%\TSLOG\" /Q /S
-RD  "%ProgramData%\Xunlei\" /Q /S
+ECHO	ÇåÀí Ñ¸À×
+RD  "%ProgramData%\TSLOG\"  /Q  /S
+RD  "%ProgramData%\Xunlei\"  /Q  /S
 
-ECHO	æ¸…ç† WD
-RD  "%ProgramData%\Western Digital\" /Q /S
+ECHO	ÇåÀí WD
+RD  "%ProgramData%\Western Digital\"  /Q  /S
 
-ECHO	æ¸…ç† WPS
-DEL  "E:\Program Files\WPS Office\wpscenter.exe" /Q /S
+ECHO	ÇåÀí WPS
+DEL  "E:\Program Files\WPS Office\wpscenter.exe"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç†3721æ–‡ä»¶
+ECHO	ÇåÀí3721ÎÄ¼ş
 DEL "%WINDIR%\Downloaded Program Files\CnsHook.dll" /f
 DEL "%WINDIR%\Downloaded Program Files\cnsio.dll" /f
 DEL "%WINDIR%\Downloaded Program Files\cnsmin.dll" /f
 DEL "%WINDIR%\Downloaded Program Files\CnsMinIO.dll" /f
 ECHO.
-ECHO	æ¸…ç† ACDSee çš„æ’ä»¶:å›¾æ ‡ï¼Œå­—ä½“
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\ID_Ico.apl" /Q /S
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\ID_Font.apl" /Q /S
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.hlp" /Q /S
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.chm" /Q /S
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.ico" /Q /S
-DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\LicenseAgreement.rtf" /Q /S
-
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\ID_Ico.apl" /Q /S
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\ID_Font.apl" /Q /S
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.hlp" /Q /S
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.chm" /Q /S
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.ico" /Q /S
-DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\LicenseAgreement.rtf" /Q /S
+ECHO	ÇåÀí ACDSee µÄ²å¼ş:Í¼±ê£¬×ÖÌå
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.chm"  /Q  /S
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.hlp"  /Q  /S
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\*.ico"  /Q  /S
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\ID_Font.apl"  /Q  /S
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\ID_Ico.apl"  /Q  /S
+DEL "%ProgramFiles% (x86)\ACD Systems\ACDSee\9.0\LicenseAgreement.rtf"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.chm"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.hlp"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\*.ico"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\ID_Font.apl"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\ID_Ico.apl"  /Q  /S
+DEL "%ProgramFiles%\ACD Systems\ACDSee\9.0\LicenseAgreement.rtf"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç† Apple App
+ECHO	ÇåÀí Apple App
 rename "%ProgramFiles% (x86)\Common Files\Apple\Mobile Device Support\AppleMobileDeviceService.exe" "_AppleMobileDeviceService.exe"
 
-RD  "%ProgramData%\Apple Computer\Installer Cache\" /Q /S
-DEL "%APPDATA%\Roaming\Apple Computer\Logs\*.log" /Q /S
+RD  "%ProgramData%\Apple Computer\Installer Cache\"  /Q  /S
+DEL "%APPDATA%\Roaming\Apple Computer\Logs\*.log"  /Q  /S
 
 ECHO.
-ECHO	æ¸…ç† Opera Cache
-RD  "%APPDATA%\Opera\Opera\profile\opcache" /Q /S
-RD  "%APPDATA%\Opera\Opera\profile\cache4" /Q /S
-rem Opera 10 Files
-RD  "%APPDATA%\Opera\Opera\cache" /Q /S
-RD  "%APPDATA%\Opera\Opera\temporary_downloads" /Q /S
-RD  "%APPDATA%\Opera\Opera\opcache" /Q /S
-rem å¿«é€Ÿæ‹¨å·ç¼©ç•¥å›¾
-rem DEL "%APPDATA%\Opera\Opera\thumbnails\*" /Q /S
-RD  "%APPDATA%\Local\Opera\Opera\vps" /Q /S
-DEL "%APPDATA%\Local\Opera\Opera\icons\*.*" /Q /S
+ECHO	ÇåÀí Opera Cache
+RD  "%APPDATA%\Opera\Opera\profile\opcache"  /Q  /S
+RD  "%APPDATA%\Opera\Opera\profile\cache4"  /Q  /S
+
+REM Opera Files
+RD  "%APPDATA%\Opera\Opera\cache"  /Q  /S
+RD  "%APPDATA%\Opera\Opera\temporary_downloads"  /Q  /S
+RD  "%APPDATA%\Opera\Opera\opcache"  /Q  /S
+
+REM ¿ìËÙ²¦ºÅËõÂÔÍ¼
+REM DEL "%APPDATA%\Opera\Opera\thumbnails\*"  /Q  /S
+RD  "%APPDATA%\Opera\Opera\vps"  /Q  /S
+DEL "%APPDATA%\Opera\Opera\icons\*.*"  /Q  /S
 ECHO.
 ECHO.
-ECHO	æ¸…ç† Application Data é‡Œçš„æ–‡ä»¶
-RD  "%APPDATA%\Media Player Classic" /q
-RD  "%APPDATA%\pe explorer" /q
-RD  "%APPDATA%\360safe" /q
+ECHO	ÇåÀí Application Data ÀïµÄÎÄ¼ş
+RD  "%APPDATA%\Media Player Classic"  /Q
+RD  "%APPDATA%\pe explorer"  /Q
+RD  "%APPDATA%\360safe"  /Q
 
-RD  "%ALLUSERSPROFILE%\Application Data\Kingsoft\PowerWoRD Lite" /q
-RD  "%ALLUSERSPROFILE%\Application Data\TEMP" /q
+RD  "%ALLUSERSPROFILE%\Application Data\Kingsoft\PowerWoRD Lite"  /Q
+RD  "%ALLUSERSPROFILE%\Application Data\TEMP"  /Q
 
-ECHO PHP Now æ¸…ç†
-DEL "E:\Dropbox\www\Phpnow\Apache-22\logs\*.*" /Q /S
-DEL "E:\Dropbox\Servkit\logs\*.*" /Q /S
-DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\mysql-bin*.*" /Q /S
-DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\*.err" /Q /S
-rem DEL "E:\Dropbox\*.log" /Q /S
+ECHO PHP Now ÇåÀí
+DEL "E:\Dropbox\Servkit\logs\*.*"  /Q  /S
+DEL "E:\Dropbox\www\Phpnow\Apache-22\logs\*.*"  /Q  /S
+DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\*.err"  /Q  /S
+DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\mysql-bin*.*"  /Q  /S
+REM DEL "E:\Dropbox\*.log"  /Q  /S
 
-DEL "%Windir%\Installer\5b3ce1.msi" /Q /S
+DEL "%Windir%\Installer\5b3ce1.msi"  /Q  /S
 
 
-ECHO æ³¨å†Œè¡¨æ¸…ç†
+ECHO ×¢²á±íÇåÀí
 
 CLS
 COLOR 2F
 ECHO.
 ECHO.
-ECHO	ç³»ç»Ÿæ¸…ç†å·²ç»å®Œæˆ, æ„Ÿè°¢ä½ ä½¿ç”¨ %author% çš„ä½œå“ï¼
+ECHO	ÏµÍ³ÇåÀíÒÑ¾­Íê³É, ¸ĞĞ»ÄãÊ¹ÓÃ %author% µÄ×÷Æ·£¡
+ECHO	Cleaner is all done, %author% Thanks for use!
 
 PAUSE
