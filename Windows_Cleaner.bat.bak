@@ -1,6 +1,6 @@
 @ECHO	off
 REM 设置环境变量
-SET build=20220620
+SET build=2021730
 SET author=Sut
 SET title=Windows Cleaner Tools/Windows 清理工具
 
