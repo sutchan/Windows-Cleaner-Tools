@@ -51,6 +51,8 @@ VER | FIND "6.0" >NUL
 IF %ERRORLEVEL% EQU 0 SET WINVER=Vista
 VER | FIND "5.1" >NUL
 IF %ERRORLEVEL% EQU 0 SET WINVER=XP
+VER | FINDSTR /B /I "10.0.2" >NUL
+IF %ERRORLEVEL% EQU 0 SET WINVER=11
 
 ECHO [INFO] Detected Windows: %WINVER%
 ECHO.
@@ -180,10 +182,8 @@ IF EXIST "C:\PerfLogs" (
 )
 
 REM Windows resource cache
-FOR %%i IN (rescache rescache) DO (
-    IF EXIST "%WINDIR%\%%i" (
-        RD /S /Q "%WINDIR%\%%i" >NUL 2>&1
-    )
+IF EXIST "%WINDIR%\rescache" (
+    RD /S /Q "%WINDIR%\rescache" >NUL 2>&1
 )
 
 REM Windows setup folder
@@ -193,7 +193,7 @@ IF EXIST "%WINDIR%\Setup" (
 
 REM Windows servicing LCU
 IF EXIST "%WINDIR%\servicing\LCU" (
-    RD /S /Q "%WINDIR%\servicing\LCU" >NUIL 2>&1
+    RD /S /Q "%WINDIR%\servicing\LCU" >NUL 2>&1
 )
 
 REM Windows downloaded program files
