@@ -98,20 +98,9 @@ Plus optional third-party software cleaning:
 
 ## 📜 Changelog
 
-### v2.0.0 (2024-05-06) - Enhanced Version
+Full changelog is available in [CHANGELOG.md](CHANGELOG.md) (Keep a Changelog format).
 
-- ✨ Added administrator privilege check mechanism
-- 🛠️ Implemented modular code structure
-- 🚫 Added error suppression to ensure cleaning process doesn't interrupt
-- 🧹 Removed potentially dangerous system modification operations
-- 🖥️ Added automatic Windows version detection
-- 🔒 Significantly improved safety and reliability
-- 📝 Fixed several known issues
-
-### v1.0.0 (2022-06-20) - Initial Release
-
-- 🎉 First release
-- ✅ Basic temporary file cleaning functionality
+Current version: **v2.1.0** (2026-08-07) — added zero-dependency GUI and launcher.
 
 ## 📊 Technical Details
 
