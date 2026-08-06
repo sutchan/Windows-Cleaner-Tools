@@ -1,5 +1,5 @@
 @ECHO OFF
-REM Windows Cleaner Tools v2.0.0 - Enhanced & Safer Version
+REM Windows Cleaner Tools v2.1.0 - Enhanced & Safer Version
 REM Author: Sut
 REM Windows Version: XP/7/8/10/11
 
@@ -14,7 +14,7 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-SET version=2.0.0
+SET version=2.1.0
 SET author=Sut
 SET title=Windows Cleaner Tools
 SET build=20240506

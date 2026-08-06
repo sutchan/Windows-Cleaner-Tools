@@ -145,6 +145,13 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 
 ### 3.2 Version History
 
+#### Version 2.1.0 (2026-08-07)
+- Added zero-dependency PowerShell + WinForms GUI (`Windows_Cleaner_GUI.ps1`)
+- Added `启动清理工具.bat` launcher (hides PowerShell window)
+- Added pre-cleanup confirmation dialog with danger warnings
+- Removed dangerous operations (legacy commented out, GUI system-dir items removed)
+- Fixed GUI layout/DPI issues and batch banner mojibake
+
 #### Version 2.0.0 (2024-05-06)
 - Added administrator privilege check
 - Implemented modular section structure
