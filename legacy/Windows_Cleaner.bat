@@ -5,6 +5,8 @@ REM disables services, and contains hardcoded personal paths.
 REM DO NOT RUN on production or others' machines. Archived for reference only.
 REM ============================================================
 @ECHO	off
+exit /b
+REM This archived script is for REFERENCE ONLY. Execution is disabled.
 REM 设置环境变量
 SET build=20220620
 SET author=Sut
@@ -629,3 +631,4 @@ ECHO	系统清理已经完成, 感谢你使�?%author% 的作品！
 ECHO	Cleaner is all done, %author% Thanks for use!
 
 PAUSE
+

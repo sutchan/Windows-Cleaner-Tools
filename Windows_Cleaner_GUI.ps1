@@ -93,7 +93,8 @@ $STD_TASKS = @(
     @{Key='thumbcache'; Name='缩略图缓存';                        Kind='glob'; Target='%LOCALAPPDATA%\Microsoft\Windows\Explorer'; Danger=$false},
     @{Key='edge_cache'; Name='Edge 浏览器缓存';                   Kind='glob'; Target='%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Cache';    Danger=$false},
     @{Key='chrome_cache'; Name='Chrome 浏览器缓存';               Kind='glob'; Target='%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache';    Danger=$false},
-    @{Key='firefox_cache'; Name='Firefox 缓存';                   Kind='glob'; Target='%LOCALAPPDATA%\Mozilla\Firefox\Profiles';   Danger=$false},
+    @{Key='firefox_cache'; Name='Firefox 缓存';                   Kind='glob'; Target='%LOCALAPPDATA%\Mozilla\Firefox\Profiles\*\cache2'; Danger=$false},
+    @{Key='firefox_cache2'; Name='Firefox 缓存 (cache)';           Kind='glob'; Target='%LOCALAPPDATA%\Mozilla\Firefox\Profiles\*\cache';  Danger=$false},
     @{Key='recycle';    Name='回收站 (C:-L:)';                    Kind='recycle'; Target=$null;                                    Danger=$false}
 )
 
@@ -243,6 +244,15 @@ $btnStart.Add_Click({
         [System.Windows.Forms.MessageBox]::Show('请先勾选至少一项。', '提示', 'OK', 'Information')
         return
     }
+    $dangerList = $selected | Where-Object { $_.Danger }
+    $msg = "即将清理以下 $($selected.Count) 项:`r`n`r`n"
+    $msg += ($selected | ForEach-Object { '- ' + $_.Name }) -join "`r`n"
+    if ($dangerList.Count -gt 0) {
+        $msg += "`r`n`r`n[警告] 其中包含 $($dangerList.Count) 个高级/危险项, 删除后不可恢复!"
+    }
+    $msg += "`r`n`r`n确认开始清理?"
+    $ans = [System.Windows.Forms.MessageBox]::Show($msg, '确认清理', 'YesNo', 'Warning')
+    if ($ans -ne 'Yes') { return }
     $script:Running = $true
     $script:StopFlag = $false
     $progress.Visible = $true
