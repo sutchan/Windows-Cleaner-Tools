@@ -63,7 +63,9 @@ windows-cleaner-tools/
 ├── LICENSE                        # GNU General Public License v3.0
 ├── OPENSPEC.md                    # OpenSpec 详细规范文档
 ├── legacy/Windows_Cleaner.bat    # 原始版本 (v1.0.0，已归档，不推荐使用)
-└── Windows_Cleaner_Enhanced.bat   # 增强版本 (v2.0.0) - 推荐使用
+├── Windows_Cleaner_Enhanced.bat   # 增强版本 (v2.0.0) - 命令行, 推荐使用
+├── Windows_Cleaner_GUI.ps1        # 图形界面版 (PowerShell + WinForms, 零依赖)
+└── 启动清理工具.bat               # GUI 启动器 (隐藏 PowerShell 窗口)
 ```
 
 ## 🧐 清理内容详解
@@ -111,6 +113,24 @@ windows-cleaner-tools/
 | **行尾符** | CRLF (Windows) |
 | **所需权限** | 管理员 |
 | **命令行工具** | cmd.exe |
+
+## 🖥️ 图形界面 (GUI)
+
+`Windows_Cleaner_GUI.ps1` 是基于 PowerShell + WinForms 的零依赖图形界面，支持分项勾选、实时进度与日志、管理员自检。
+
+**运行方式**（推荐双击启动器，不会弹出 PowerShell 控制台窗口）：
+
+1. 双击 `启动清理工具.bat` —— 以隐藏窗口方式启动 GUI
+2. 或在 PowerShell 中执行：`.\Windows_Cleaner_GUI.ps1`
+
+> 若直接双击 `.ps1` 文件，系统会用 `powershell.exe` 打开并弹出蓝色控制台窗口；使用 `启动清理工具.bat` 可避免此问题。GUI 内部「以管理员重启」也会以隐藏窗口方式重新运行。
+
+| 属性 | 值 |
+|------|-----|
+| **语言** | PowerShell 5.1+ / .NET WinForms |
+| **依赖** | 系统自带, 零依赖 |
+| **编码** | UTF-8 with BOM |
+| **所需权限** | 部分项需管理员 |
 
 ## ⚠️ 安全说明
 

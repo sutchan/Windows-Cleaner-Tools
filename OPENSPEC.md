@@ -137,7 +137,9 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 ├── README.md                    # Chinese documentation (default)
 ├── README_EN.md                 # English documentation
 ├── LICENSE                      # Project license
-├── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.0.0)
+├── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.0.0, CLI)
+├── Windows_Cleaner_GUI.ps1      # GUI version (PowerShell + WinForms, zero-dependency)
+├── 启动清理工具.bat             # GUI launcher (hides PowerShell window)
 └── legacy/Windows_Cleaner.bat   # Legacy version (v1.0.0, archived, not recommended)
 ```
 
@@ -164,10 +166,17 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 - Windows 11
 
 ### 3.4 Encoding and Format
-- **Language**: Windows Batch Script
+- **Language**: Windows Batch Script (CLI) / PowerShell 5.1+ WinForms (GUI)
 - **Encoding**: UTF-8 with BOM
 - **Line Endings**: CRLF (Windows)
-- **Required**: cmd.exe, Administrator rights
+- **Required**: cmd.exe / powershell.exe, Administrator rights (部分项)
+- **GUI Launcher**: `启动清理工具.bat` 以 `-WindowStyle Hidden` 启动, 避免弹出 PowerShell 控制台
+
+### 3.5 GUI Frontend
+- `Windows_Cleaner_GUI.ps1`: PowerShell + WinForms, 零依赖
+- 功能: 分项勾选、进度条 + 实时日志、管理员自检与「以管理员重启」
+- DPI 自适应 (`AutoScaleMode = Dpi`), 固定尺寸 720x640, 防止高 DPI 下窗口显示不全
+- 「以管理员重启」以隐藏窗口方式重新运行, 不弹出 PowerShell 窗口
 
 ---
 
