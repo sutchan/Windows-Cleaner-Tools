@@ -1,9 +1,7 @@
-@ECHO OFF
+﻿@ECHO OFF
 REM Windows Cleaner Tools v2.0.0 - Enhanced & Safer Version
 REM Author: Sut
 REM Windows Version: XP/7/8/10/11
-
-SETLOCAL ENABLEDELAYEDEXPANSION
 
 REM Check if running as administrator
 net session >nul 2>&1
@@ -30,8 +28,7 @@ REM ============================================================
 ECHO.
 ECHO  ========================================================================
 ECHO.
-ECHO     【 %title% 】
-ECHO.
+ECHO     銆?%title% 銆?ECHO.
 ECHO     Version  : %version%
 ECHO     Author   : %author%
 ECHO     Build    : %build%
@@ -61,7 +58,7 @@ REM ============================================================
 REM Safety Warning
 REM ============================================================
 ECHO  ========================================================================
-ECHO  IMPORTANT WARNING / 重要警告:
+ECHO  IMPORTANT WARNING / 閲嶈璀﹀憡:
 ECHO  ------------------------------------------------------------------
 ECHO  - This script will clean temporary files and cache
 ECHO  - It is RECOMMENDED to close all running applications
@@ -296,11 +293,7 @@ ECHO.
 ECHO  ========================================================================
 ECHO.
 
-REM Refresh Windows Explorer
-START explorer.exe
-
 PAUSE
 
 :END
-ENDLOCAL
 EXIT /B 0

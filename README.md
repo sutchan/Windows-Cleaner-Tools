@@ -62,8 +62,7 @@ windows-cleaner-tools/
 ├── README_EN.md                   # English documentation
 ├── LICENSE                        # GNU General Public License v3.0
 ├── OPENSPEC.md                    # OpenSpec 详细规范文档
-├── Windows_Cleaner.bat            # 原始版本 (v1.0.0)
-├── Windows_Cleaner.bat.bak        # 原始版本备份
+├── legacy/Windows_Cleaner.bat    # 原始版本 (v1.0.0，已归档，不推荐使用)
 └── Windows_Cleaner_Enhanced.bat   # 增强版本 (v2.0.0) - 推荐使用
 ```
 

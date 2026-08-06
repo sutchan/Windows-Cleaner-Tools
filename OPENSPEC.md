@@ -99,6 +99,14 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 - No registry modifications
 - No system settings changes
 
+> **Note on Legacy Version (v1.0.0)**: `legacy/Windows_Cleaner.bat` is the original
+> 2022 release and does NOT follow the safety guarantees above. It deletes system
+> components (e.g. Windows Update client `wuauclt.exe`, IME/input-method folders,
+> `Cursors`, `boot` language packs, `Help`, `Wallpaper`, `rescache`), disables the
+> `knlrun` service, and references machine-specific absolute paths. It is archived
+> for historical reference only and must NOT be run on production systems. Always
+> use `Windows_Cleaner_Enhanced.bat` (v2.0.0).
+
 #### 2.2.3 User Confirmation
 - Prompts user for confirmation before cleanup
 - Allows user to abort the operation
@@ -126,12 +134,11 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 
 ```
 /workspace/
-├── README.md                    # English documentation
-├── README_CN.md                 # Chinese documentation
+├── README.md                    # Chinese documentation (default)
+├── README_EN.md                 # English documentation
 ├── LICENSE                      # Project license
-├── Windows_Cleaner.bat         # Legacy version (v1.0.0)
-├── Windows_Cleaner.bat.bak     # Backup of legacy version
-└── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.0.0)
+├── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.0.0)
+└── legacy/Windows_Cleaner.bat   # Legacy version (v1.0.0, archived, not recommended)
 ```
 
 ### 3.2 Version History
