@@ -176,52 +176,58 @@ foreach ($t in $ADV_TASKS) {
     $y += 22
 }
 
+# 底部固定区: 使用 Dock=Bottom 的面板, 由 WinForms 自动计算布局, 彻底避免边距计算错误
+$bottomPanel = New-Object System.Windows.Forms.Panel
+$bottomPanel.Dock = [System.Windows.Forms.DockStyle]::Bottom
+$bottomPanel.Height = 132
+$bottomPanel.Padding = New-Object System.Windows.Forms.Padding(10, 8, 10, 8)
+$form.Controls.Add($bottomPanel)
+
+# 进度条
 $progress = New-Object System.Windows.Forms.ProgressBar
 $progress.Style = 'Marquee'
-$progress.Location = New-Object System.Drawing.Point(12, 528)
+$progress.Location = New-Object System.Drawing.Point(10, 8)
 $progress.Size = New-Object System.Drawing.Size(680, 14)
-$progress.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
-$form.Controls.Add($progress)
+$progress.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
+$bottomPanel.Controls.Add($progress)
 
+# 日志框
 $Global:LogBox = New-Object System.Windows.Forms.TextBox
 $Global:LogBox.Multiline = $true
 $Global:LogBox.ScrollBars = 'Vertical'
 $Global:LogBox.ReadOnly = $true
 $Global:LogBox.Font = New-Object System.Drawing.Font('Consolas', 9)
-$Global:LogBox.Location = New-Object System.Drawing.Point(12, 548)
-$Global:LogBox.Size = New-Object System.Drawing.Size(680, 90)
-$Global:LogBox.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
-$form.Controls.Add($Global:LogBox)
+$Global:LogBox.Location = New-Object System.Drawing.Point(10, 28)
+$Global:LogBox.Size = New-Object System.Drawing.Size(680, 56)
+$Global:LogBox.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
+$bottomPanel.Controls.Add($Global:LogBox)
 
+# 按钮行
 $btnAll = New-Object System.Windows.Forms.Button
-$btnAll.Text = '全选'; $btnAll.Location = New-Object System.Drawing.Point(12, 644)
+$btnAll.Text = '全选'; $btnAll.Location = New-Object System.Drawing.Point(10, 90)
 $btnAll.Size = New-Object System.Drawing.Size(70, 28)
-$btnAll.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
-$form.Controls.Add($btnAll)
+$bottomPanel.Controls.Add($btnAll)
 
 $btnNone = New-Object System.Windows.Forms.Button
-$btnNone.Text = '全不选'; $btnNone.Location = New-Object System.Drawing.Point(90, 644)
+$btnNone.Text = '全不选'; $btnNone.Location = New-Object System.Drawing.Point(88, 90)
 $btnNone.Size = New-Object System.Drawing.Size(70, 28)
-$btnNone.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
-$form.Controls.Add($btnNone)
+$bottomPanel.Controls.Add($btnNone)
 
 $btnStart = New-Object System.Windows.Forms.Button
-$btnStart.Text = '开始清理'; $btnStart.Location = New-Object System.Drawing.Point(168, 644)
+$btnStart.Text = '开始清理'; $btnStart.Location = New-Object System.Drawing.Point(166, 90)
 $btnStart.Size = New-Object System.Drawing.Size(80, 28)
-$btnStart.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
-$form.Controls.Add($btnStart)
+$bottomPanel.Controls.Add($btnStart)
 
 $btnStop = New-Object System.Windows.Forms.Button
-$btnStop.Text = '停止'; $btnStop.Location = New-Object System.Drawing.Point(256, 644)
+$btnStop.Text = '停止'; $btnStop.Location = New-Object System.Drawing.Point(254, 90)
 $btnStop.Size = New-Object System.Drawing.Size(70, 28)
-$btnStop.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
-$form.Controls.Add($btnStop)
+$bottomPanel.Controls.Add($btnStop)
 
 $btnAdmin = New-Object System.Windows.Forms.Button
-$btnAdmin.Text = '以管理员重启'; $btnAdmin.Location = New-Object System.Drawing.Point(602, 644)
+$btnAdmin.Text = '以管理员重启'; $btnAdmin.Location = New-Object System.Drawing.Point(600, 90)
 $btnAdmin.Size = New-Object System.Drawing.Size(90, 28)
-$btnAdmin.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Right
-$form.Controls.Add($btnAdmin)
+$btnAdmin.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Right
+$bottomPanel.Controls.Add($btnAdmin)
 
 $script:Running = $false
 $script:StopFlag = $false
