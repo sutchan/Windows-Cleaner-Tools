@@ -1,4 +1,4 @@
-﻿@ECHO OFF
+@ECHO OFF
 REM Windows Cleaner Tools v2.0.0 - Enhanced & Safer Version
 REM Author: Sut
 REM Windows Version: XP/7/8/10/11
@@ -28,7 +28,7 @@ REM ============================================================
 ECHO.
 ECHO  ========================================================================
 ECHO.
-ECHO     銆?%title% 銆?ECHO.
+ECHO     * %title% *
 ECHO     Version  : %version%
 ECHO     Author   : %author%
 ECHO     Build    : %build%
@@ -58,7 +58,7 @@ REM ============================================================
 REM Safety Warning
 REM ============================================================
 ECHO  ========================================================================
-ECHO  IMPORTANT WARNING / 閲嶈璀﹀憡:
+ECHO  IMPORTANT WARNING / IMPORTANT:
 ECHO  ------------------------------------------------------------------
 ECHO  - This script will clean temporary files and cache
 ECHO  - It is RECOMMENDED to close all running applications
@@ -297,3 +297,4 @@ PAUSE
 
 :END
 EXIT /B 0
+

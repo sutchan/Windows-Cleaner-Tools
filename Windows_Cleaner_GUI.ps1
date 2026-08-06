@@ -105,18 +105,9 @@ $ADV_TASKS = @(
     @{Key='adv_wallpaper'; Name='[高级] 墙纸 (Wallpaper)';        Kind='path'; Target='%SystemRoot%\Web\Wallpaper';                Danger=$true},
     @{Key='adv_rescache'; Name='[高级] 资源缓存 (rescache)';      Kind='path'; Target='%SystemRoot%\rescache';                     Danger=$true},
     @{Key='adv_fonts_cache'; Name='[高级] 字体缓存';              Kind='glob'; Target='%SystemRoot%\ServiceProfiles\LocalService\AppData\Local\FontCache'; Danger=$true},
-    @{Key='adv_software'; Name='[高级] 常用软件缓存';             Kind='glob'; Target='%LOCALAPPDATA%';                            Danger=$true}
+    @{Key='adv_software'; Name='[高级] 常用软件缓存 (Edge/Chrome/Teams)'; Kind='glob'; Target='%LOCALAPPDATA%\Microsoft\Edge\User Data\*\Cache'; Danger=$true},
+    @{Key='adv_software2'; Name='[高级] 常用软件缓存 (Firefox/Mozilla)';   Kind='glob'; Target='%LOCALAPPDATA%\Mozilla\Firefox\Profiles\*\cache2'; Danger=$true}
 )
-
-function Invoke-Task {
-    param($Task)
-    Write-Log "==> $($Task.Name)"
-    switch ($Task.Kind) {
-        'glob'    { Clear-DirChildren $Task.Target }
-        'path'    { Remove-SafePath $Task.Target }
-        'recycle' { 'C','D','E','F','G','H','I','J','K','L' | ForEach-Object { Clear-RecycleBinDrive ($_ + ':') } }
-    }
-}
 
 # ---------------------------------------------------------------------------
 # GUI

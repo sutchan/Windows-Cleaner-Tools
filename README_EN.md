@@ -63,7 +63,9 @@ windows-cleaner-tools/
 ├── LICENSE                        # GNU General Public License v3.0
 ├── OPENSPEC.md                    # OpenSpec detailed specification document
 ├── legacy/Windows_Cleaner.bat    # Original version (v1.0.0, archived, not recommended)
-└── Windows_Cleaner_Enhanced.bat   # Enhanced version (v2.0.0) - Recommended
+├── Windows_Cleaner_Enhanced.bat   # Enhanced version (v2.0.0) - CLI, recommended
+├── Windows_Cleaner_GUI.ps1        # GUI version (PowerShell + WinForms, zero-dependency)
+└── 启动清理工具.bat               # GUI launcher (hides PowerShell window)
 ```
 
 ## 🧐 Detailed Cleaning Content
@@ -155,6 +157,24 @@ This project is licensed under the **GNU General Public License v3.0** - see the
 ## 🙏 Acknowledgments
 
 Thanks to everyone who has contributed to this project!
+
+## 🖥️ GUI Version
+
+`Windows_Cleaner_GUI.ps1` is a zero-dependency graphical interface built with PowerShell + WinForms. It supports per-item checkboxes, live progress and log, and administrator self-check.
+
+**How to run** (recommended: double-click the launcher to avoid a PowerShell console window):
+
+1. Double-click `启动清理工具.bat` — launches the GUI with a hidden window
+2. Or run directly in PowerShell: `.\Windows_Cleaner_GUI.ps1`
+
+> Note: Double-clicking the `.ps1` file directly opens it via `powershell.exe` and shows a blue console window. Using `启动清理工具.bat` avoids this. The in-GUI "Restart as Admin" also re-runs with a hidden window.
+
+| Property | Value |
+|----------|-------|
+| **Language** | PowerShell 5.1+ / .NET WinForms |
+| **Dependencies** | Built-in, zero-dependency |
+| **Encoding** | UTF-8 with BOM |
+| **Permissions** | Some items require administrator |
 
 ---
 
