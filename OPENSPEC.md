@@ -6,7 +6,7 @@
 Windows Cleaner Tools
 
 ### Project Type
-Windows Batch Script Utility
+Windows Batch Script Utility + PowerShell WinForms GUI (zero-dependency)
 
 ### Core Functionality
 A comprehensive batch script solution for cleaning temporary files, caches, browser data, and system junk from Windows XP through Windows 11 systems.
@@ -104,8 +104,10 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 > components (e.g. Windows Update client `wuauclt.exe`, IME/input-method folders,
 > `Cursors`, `boot` language packs, `Help`, `Wallpaper`, `rescache`), disables the
 > `knlrun` service, and references machine-specific absolute paths. It is archived
-> for historical reference only and must NOT be run on production systems. Always
-> use `Windows_Cleaner_Enhanced.bat` (v2.0.0).
+> for historical reference only. As of v2.1.0 its execution is fully disabled
+> (`exit /b` at top) and all destructive commands are commented out. It must NOT
+> be run on production systems. Always use `Windows_Cleaner_Enhanced.bat` (v2.1.0)
+> or the GUI (`Windows_Cleaner_GUI.ps1`).
 
 #### 2.2.3 User Confirmation
 - Prompts user for confirmation before cleanup
@@ -137,7 +139,7 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 ├── README.md                    # Chinese documentation (default)
 ├── README_EN.md                 # English documentation
 ├── LICENSE                      # Project license
-├── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.0.0, CLI)
+├── Windows_Cleaner_Enhanced.bat # Enhanced version (v2.1.0, CLI)
 ├── Windows_Cleaner_GUI.ps1      # GUI version (PowerShell + WinForms, zero-dependency)
 ├── 启动清理工具.bat             # GUI launcher (hides PowerShell window)
 └── legacy/Windows_Cleaner.bat   # Legacy version (v1.0.0, archived, not recommended)
@@ -182,7 +184,7 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 ### 3.5 GUI Frontend
 - `Windows_Cleaner_GUI.ps1`: PowerShell + WinForms, 零依赖
 - 功能: 分项勾选、进度条 + 实时日志、管理员自检与「以管理员重启」
-- DPI 自适应 (`AutoScaleMode = Dpi`), 固定尺寸 720x640, 防止高 DPI 下窗口显示不全
+- DPI 自适应 (`AutoScaleMode = Dpi`), 固定尺寸 720x700, 底部控件 Anchor=Bottom, 防止高 DPI 下窗口显示不全
 - 「以管理员重启」以隐藏窗口方式重新运行, 不弹出 PowerShell 窗口
 
 ---
@@ -248,7 +250,7 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 5. Restart your computer if recommended
 
 ### 6.3 Recommended Version
-For Windows XP through Windows 11, use **Windows_Cleaner_Enhanced.bat** (v2.0.0) as it includes improved safety features and error handling.
+For Windows XP through Windows 11, use **Windows_Cleaner_Enhanced.bat** (v2.1.0) as it includes improved safety features and error handling. A graphical interface is also available via **Windows_Cleaner_GUI.ps1** (launched with `启动清理工具.bat`).
 
 ---
 

@@ -24,9 +24,17 @@ A comprehensive Windows system cleaning tool designed to clean temporary files, 
 - **Recent Files Cleaning**: Clears recent files, thumbnail cache, and icon cache
 - **Third-Party Software Cleaning**: Cleans caches and logs from popular applications
 
+### 🖥️ GUI Frontend
+
+- **Zero-dependency**: PowerShell + WinForms, no extra runtime needed
+- **Item selection**: Standard items + advanced items (unchecked by default, danger marked red)
+- **Live feedback**: Progress bar + real-time log, runs in background without freezing
+- **Privilege check**: Auto-detects administrator, one-click "Restart as Admin"
+- **Confirmation**: Lists pending items before cleaning, warns about danger items
+
 ### 🛡️ Safety Features
 
-- **Administrator Privilege Check**: Requires running as administrator
+- **Administrator Privilege Check**: Requires running as administrator (CLI)
 - **Error Suppression**: Prevents error messages from interrupting the cleaning process
 - **Conditional Execution**: Only processes existing folders to avoid unnecessary operations
 - **Non-Destructive Operations**: Only removes safe, rebuildable data
@@ -35,8 +43,9 @@ A comprehensive Windows system cleaning tool designed to clean temporary files, 
 ## 📋 System Requirements
 
 - **Operating System**: Windows XP or later (32/64-bit)
-- **Runtime Environment**: Windows Command Prompt (cmd.exe)
-- **Required Permissions**: Administrator privileges
+- **CLI version**: Windows Command Prompt (cmd.exe), requires Administrator privileges
+- **GUI version**: PowerShell 5.1+ (built-in), some advanced items require Administrator
+- **Dependencies**: Zero-dependency, no extra runtime needed
 
 ## 🚀 Quick Start
 
@@ -63,7 +72,7 @@ windows-cleaner-tools/
 ├── LICENSE                        # GNU General Public License v3.0
 ├── OPENSPEC.md                    # OpenSpec detailed specification document
 ├── legacy/Windows_Cleaner.bat    # Original version (v1.0.0, archived, not recommended)
-├── Windows_Cleaner_Enhanced.bat   # Enhanced version (v2.0.0) - CLI, recommended
+├── Windows_Cleaner_Enhanced.bat   # Enhanced version (v2.1.0) - CLI, recommended
 ├── Windows_Cleaner_GUI.ps1        # GUI version (PowerShell + WinForms, zero-dependency)
 └── 启动清理工具.bat               # GUI launcher (hides PowerShell window)
 ```
@@ -108,20 +117,21 @@ Plus optional third-party software cleaning:
 
 | Attribute | Value |
 |-----------|-------|
-| **Language** | Windows Batch Script |
+| **Language** | Windows Batch Script (CLI) / PowerShell 5.1+ WinForms (GUI) |
 | **Encoding** | UTF-8 with BOM |
 | **Line Endings** | CRLF (Windows) |
-| **Required Permissions** | Administrator |
-| **Command-line Tool** | cmd.exe |
+| **Required Permissions** | Administrator (CLI required; GUI partial) |
+| **Command-line Tool** | cmd.exe / powershell.exe |
 
 ## ⚠️ Safety Notes
 
 > **Important**: Please read the following safety information carefully
 
-- ✅ This script only removes safe, rebuildable data
-- ✅ System critical files are not touched
-- ✅ No registry modifications
-- ✅ No system settings changes
+- ✅ The Enhanced and GUI versions only remove safe, rebuildable data (temp/cache/logs)
+- ✅ System critical files are not touched (destructive items like IME/Cursors/Help/rescache removed from GUI)
+- ✅ No registry modifications, no system settings changes
+- ⚠️ The GUI has optional "Advanced" items, unchecked by default and marked red, requiring confirmation
+- ⚠️ The `legacy/` folder is the original dangerous script; it is disabled and commented out for reference only — do NOT run it
 - ⚠️ Always backup important data before running
 - ⚠️ Make sure to run as administrator
 - ⚠️ Recommended to create a system restore point before running

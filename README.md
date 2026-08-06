@@ -24,6 +24,14 @@
 - **最近文件清理**：清除最近文件和缩略图、图标缓存
 - **第三方软件清理**：清理热门应用程序的缓存和日志
 
+### 🖥️ 图形界面 (GUI)
+
+- **零依赖**：基于 PowerShell + WinForms，系统自带无需安装运行时
+- **分项勾选**：标准清理项 + 高级项（默认不勾、危险项标红）
+- **实时反馈**：进度条 + 实时日志输出，后台运行不卡顿
+- **权限自检**：自动检测管理员权限，一键「以管理员重启」
+- **二次确认**：开始清理前列出待清理项，危险项显式警示
+
 ### 🛡️ 安全特性
 
 - **管理员权限检查**：强制要求以管理员身份运行
@@ -35,8 +43,9 @@
 ## 📋 系统要求
 
 - **操作系统**：Windows XP 或更高版本 (32/64位)
-- **运行环境**：Windows Command Prompt (cmd.exe)
-- **所需权限**：管理员权限
+- **命令行版**：Windows Command Prompt (cmd.exe)，需管理员权限
+- **图形界面版**：PowerShell 5.1+（系统自带），部分高级清理项需管理员权限
+- **依赖**：零依赖，无需安装额外运行时
 
 ## 🚀 快速开始
 
@@ -63,7 +72,7 @@ windows-cleaner-tools/
 ├── LICENSE                        # GNU General Public License v3.0
 ├── OPENSPEC.md                    # OpenSpec 详细规范文档
 ├── legacy/Windows_Cleaner.bat    # 原始版本 (v1.0.0，已归档，不推荐使用)
-├── Windows_Cleaner_Enhanced.bat   # 增强版本 (v2.0.0) - 命令行, 推荐使用
+├── Windows_Cleaner_Enhanced.bat   # 增强版本 (v2.1.0) - 命令行, 推荐使用
 ├── Windows_Cleaner_GUI.ps1        # 图形界面版 (PowerShell + WinForms, 零依赖)
 └── 启动清理工具.bat               # GUI 启动器 (隐藏 PowerShell 窗口)
 ```
@@ -116,11 +125,11 @@ windows-cleaner-tools/
 
 | 属性 | 值 |
 |------|-----|
-| **语言** | Windows Batch Script |
+| **语言** | Windows Batch Script (CLI) / PowerShell 5.1+ WinForms (GUI) |
 | **编码** | UTF-8 with BOM |
 | **行尾符** | CRLF (Windows) |
-| **所需权限** | 管理员 |
-| **命令行工具** | cmd.exe |
+| **所需权限** | 管理员（CLI 版必需；GUI 版部分项需管理员） |
+| **命令行工具** | cmd.exe / powershell.exe |
 
 ## 🖥️ 图形界面 (GUI)
 
@@ -144,10 +153,11 @@ windows-cleaner-tools/
 
 > **重要提示**：请仔细阅读以下安全信息
 
-- ✅ 此脚本仅删除安全的、可重建的数据
-- ✅ 不会触及系统关键文件
-- ✅ 无注册表修改
-- ✅ 无系统设置更改
+- ✅ 增强版与 GUI 仅删除安全的、可重建的数据（临时文件/缓存/日志）
+- ✅ 不会触及系统关键文件（IME/Cursors/Help/rescache 等破坏性项已从 GUI 移除）
+- ✅ 无注册表修改、无系统设置更改
+- ⚠️ GUI 含可选「高级项」，默认不勾选且标红，需二次确认后方可执行
+- ⚠️ `legacy/` 目录为原始危险脚本，已禁用且注释化，仅供历史参考，切勿运行
 - ⚠️ 运行前请务必备份重要数据
 - ⚠️ 请确保以管理员身份运行
 - ⚠️ 建议在运行前创建系统还原点
