@@ -1,4 +1,4 @@
-# Windows_Cleaner_GUI.ps1
+﻿# Windows_Cleaner_GUI.ps1
 # 版本: 1.0.0
 # 描述: Windows 清理工具图形界面 (PowerShell + WinForms, 零依赖)
 # 移植自 Windows_Cleaner_Enhanced.bat (v2.0.0) 与 legacy/Windows_Cleaner.bat (v1.0.0)
