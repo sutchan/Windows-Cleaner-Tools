@@ -113,11 +113,11 @@ Add-Type -AssemblyName System.Drawing
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = 'Windows 清理工具 v1.0.0 (GUI)'
-$form.Size = New-Object System.Drawing.Size(720, 640)
+$form.Size = New-Object System.Drawing.Size(720, 700)
 $form.StartPosition = 'CenterScreen'
 $form.AutoScaleMode = [System.Windows.Forms.AutoScaleMode]::Dpi
 $form.AutoScaleDimensions = New-Object System.Drawing.SizeF(96, 96)
-$form.MinimumSize = New-Object System.Drawing.Size(720, 640)
+$form.MinimumSize = New-Object System.Drawing.Size(720, 700)
 $form.MaximizeBox = $false
 
 $title = New-Object System.Windows.Forms.Label
@@ -178,8 +178,9 @@ foreach ($t in $ADV_TASKS) {
 
 $progress = New-Object System.Windows.Forms.ProgressBar
 $progress.Style = 'Marquee'
-$progress.Location = New-Object System.Drawing.Point(12, 470)
+$progress.Location = New-Object System.Drawing.Point(12, 528)
 $progress.Size = New-Object System.Drawing.Size(680, 14)
+$progress.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
 $form.Controls.Add($progress)
 
 $Global:LogBox = New-Object System.Windows.Forms.TextBox
@@ -187,33 +188,39 @@ $Global:LogBox.Multiline = $true
 $Global:LogBox.ScrollBars = 'Vertical'
 $Global:LogBox.ReadOnly = $true
 $Global:LogBox.Font = New-Object System.Drawing.Font('Consolas', 9)
-$Global:LogBox.Location = New-Object System.Drawing.Point(12, 490)
+$Global:LogBox.Location = New-Object System.Drawing.Point(12, 548)
 $Global:LogBox.Size = New-Object System.Drawing.Size(680, 90)
+$Global:LogBox.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
 $form.Controls.Add($Global:LogBox)
 
 $btnAll = New-Object System.Windows.Forms.Button
-$btnAll.Text = '全选'; $btnAll.Location = New-Object System.Drawing.Point(12, 586)
+$btnAll.Text = '全选'; $btnAll.Location = New-Object System.Drawing.Point(12, 644)
 $btnAll.Size = New-Object System.Drawing.Size(70, 28)
+$btnAll.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 $form.Controls.Add($btnAll)
 
 $btnNone = New-Object System.Windows.Forms.Button
-$btnNone.Text = '全不选'; $btnNone.Location = New-Object System.Drawing.Point(90, 586)
+$btnNone.Text = '全不选'; $btnNone.Location = New-Object System.Drawing.Point(90, 644)
 $btnNone.Size = New-Object System.Drawing.Size(70, 28)
+$btnNone.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 $form.Controls.Add($btnNone)
 
 $btnStart = New-Object System.Windows.Forms.Button
-$btnStart.Text = '开始清理'; $btnStart.Location = New-Object System.Drawing.Point(168, 586)
+$btnStart.Text = '开始清理'; $btnStart.Location = New-Object System.Drawing.Point(168, 644)
 $btnStart.Size = New-Object System.Drawing.Size(80, 28)
+$btnStart.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 $form.Controls.Add($btnStart)
 
 $btnStop = New-Object System.Windows.Forms.Button
-$btnStop.Text = '停止'; $btnStop.Location = New-Object System.Drawing.Point(256, 586)
+$btnStop.Text = '停止'; $btnStop.Location = New-Object System.Drawing.Point(256, 644)
 $btnStop.Size = New-Object System.Drawing.Size(70, 28)
+$btnStop.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 $form.Controls.Add($btnStop)
 
 $btnAdmin = New-Object System.Windows.Forms.Button
-$btnAdmin.Text = '以管理员重启'; $btnAdmin.Location = New-Object System.Drawing.Point(602, 586)
+$btnAdmin.Text = '以管理员重启'; $btnAdmin.Location = New-Object System.Drawing.Point(602, 644)
 $btnAdmin.Size = New-Object System.Drawing.Size(90, 28)
+$btnAdmin.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Right
 $form.Controls.Add($btnAdmin)
 
 $script:Running = $false
