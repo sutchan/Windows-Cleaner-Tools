@@ -84,7 +84,6 @@ function Clear-RecycleBinDrive {
 # ---------------------------------------------------------------------------
 # 任务定义
 # ---------------------------------------------------------------------------
-# 每项: @{Key; Name; Kind; Target; Danger}
 $STD_TASKS = @(
     @{Key='temp';       Name='临时文件 (%TEMP%)';                 Kind='glob'; Target='%TEMP%';                                    Danger=$false},
     @{Key='win_temp';   Name='Windows 临时目录';                  Kind='glob'; Target='%SystemRoot%\Temp';                         Danger=$false},
@@ -129,7 +128,6 @@ $form.Text = 'Windows 清理工具 v1.0.0 (GUI)'
 $form.Size = New-Object System.Drawing.Size(700, 580)
 $form.StartPosition = 'CenterScreen'
 
-# 标题
 $title = New-Object System.Windows.Forms.Label
 $title.Text = 'Windows 清理工具 - 勾选需要清理的项, 点击「开始清理」'
 $title.Font = New-Object System.Drawing.Font('Microsoft YaHei', 11, [System.Drawing.FontStyle]::Bold)
@@ -137,7 +135,6 @@ $title.AutoSize = $true
 $title.Location = New-Object System.Drawing.Point(12, 10)
 $form.Controls.Add($title)
 
-# 面板(可滚动)
 $panel = New-Object System.Windows.Forms.Panel
 $panel.Location = New-Object System.Drawing.Point(12, 40)
 $panel.Size = New-Object System.Drawing.Size(660, 360)
@@ -187,14 +184,12 @@ foreach ($t in $ADV_TASKS) {
     $y += 22
 }
 
-# 进度条
 $progress = New-Object System.Windows.Forms.ProgressBar
 $progress.Style = 'Marquee'
 $progress.Location = New-Object System.Drawing.Point(12, 408)
 $progress.Size = New-Object System.Drawing.Size(660, 14)
 $form.Controls.Add($progress)
 
-# 日志框
 $Global:LogBox = New-Object System.Windows.Forms.TextBox
 $Global:LogBox.Multiline = $true
 $Global:LogBox.ScrollBars = 'Vertical'
@@ -204,7 +199,6 @@ $Global:LogBox.Location = New-Object System.Drawing.Point(12, 428)
 $Global:LogBox.Size = New-Object System.Drawing.Size(660, 90)
 $form.Controls.Add($Global:LogBox)
 
-# 按钮区
 $btnAll = New-Object System.Windows.Forms.Button
 $btnAll.Text = '全选'; $btnAll.Location = New-Object System.Drawing.Point(12, 524)
 $btnAll.Size = New-Object System.Drawing.Size(70, 28)
@@ -230,7 +224,6 @@ $btnAdmin.Text = '以管理员重启'; $btnAdmin.Location = New-Object System.Dr
 $btnAdmin.Size = New-Object System.Drawing.Size(90, 28)
 $form.Controls.Add($btnAdmin)
 
-# 状态变量
 $script:Running = $false
 $script:StopFlag = $false
 
@@ -327,7 +320,6 @@ $btnStart.Add_Click({
     }) | Out-Null
 })
 
-# 启动检查
 if (-not (Test-IsAdmin)) {
     [System.Windows.Forms.MessageBox]::Show(
         '部分清理项需要管理员权限才能删除系统文件。' + [Environment]::NewLine + '点击「以管理员重启」按钮以管理员身份重新运行。',
