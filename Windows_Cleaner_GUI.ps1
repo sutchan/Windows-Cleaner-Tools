@@ -100,11 +100,6 @@ $STD_TASKS = @(
 
 $ADV_TASKS = @(
     @{Key='adv_browser'; Name='[高级] 浏览器缓存/配置';           Kind='glob'; Target='%LOCALAPPDATA%\Microsoft\Windows\INetCache'; Danger=$true},
-    @{Key='adv_ime';     Name='[高级] 输入法数据 (IME)';          Kind='glob'; Target='%SystemRoot%\IME';                          Danger=$true},
-    @{Key='adv_cursors'; Name='[高级] 鼠标指针 (Cursors)';        Kind='path'; Target='%SystemRoot%\Cursors';                      Danger=$true},
-    @{Key='adv_help';    Name='[高级] 帮助文件 (Help)';           Kind='glob'; Target='%SystemRoot%\Help';                         Danger=$true},
-    @{Key='adv_wallpaper'; Name='[高级] 墙纸 (Wallpaper)';        Kind='path'; Target='%SystemRoot%\Web\Wallpaper';                Danger=$true},
-    @{Key='adv_rescache'; Name='[高级] 资源缓存 (rescache)';      Kind='path'; Target='%SystemRoot%\rescache';                     Danger=$true},
     @{Key='adv_fonts_cache'; Name='[高级] 字体缓存';              Kind='glob'; Target='%SystemRoot%\ServiceProfiles\LocalService\AppData\Local\FontCache'; Danger=$true},
     @{Key='adv_software'; Name='[高级] 常用软件缓存 (Edge/Chrome/Teams)'; Kind='glob'; Target='%LOCALAPPDATA%\Microsoft\Edge\User Data\*\Cache'; Danger=$true},
     @{Key='adv_software2'; Name='[高级] 常用软件缓存 (Firefox/Mozilla)';   Kind='glob'; Target='%LOCALAPPDATA%\Mozilla\Firefox\Profiles\*\cache2'; Danger=$true}

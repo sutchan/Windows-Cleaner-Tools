@@ -42,27 +42,27 @@ MD "%TEMP%"
 DEL "%APPDATA%\Temp\*.*"  /S  /Q
 RD  "%APPDATA%\Temp"  /S  /Q
 
-RD  c:\Config.Msi  /Q  /S
-RD  d:\Config.Msi  /Q  /S
-RD  e:\Config.Msi  /Q  /S
-RD  f:\Config.Msi  /Q  /S
-RD  G:\Config.Msi  /Q  /S
+REM [DANGEROUS-REMOVED] RD  c:\Config.Msi  /Q  /S
+REM [DANGEROUS-REMOVED] RD  d:\Config.Msi  /Q  /S
+REM [DANGEROUS-REMOVED] RD  e:\Config.Msi  /Q  /S
+REM [DANGEROUS-REMOVED] RD  f:\Config.Msi  /Q  /S
+REM [DANGEROUS-REMOVED] RD  G:\Config.Msi  /Q  /S
 
-RD  C:\PerfLogs  /Q  /S
-RD  C:\Recovery  /Q  /S
+REM [DANGEROUS-REMOVED] RD  C:\PerfLogs  /Q  /S
+REM [DANGEROUS-REMOVED] RD  C:\Recovery  /Q  /S
 
 ECHO.
 ECHO	清理 Windows 目录下的无用文件和文件夹
 DEL "%WINDIR%\*.ico" /f
 DEL "%WINDIR%\*.log"  /S
 DEL "%WINDIR%\*.tmp" /f
-DEL "%WINDIR%\clock.avi"
-DEL "%WINDIR%\dragon.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\clock.avi"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\dragon.exe" /f
 DEL "%WINDIR%\IRIMG1.BMP" /f
 DEL "%WINDIR%\system32\*.tmp"
-DEL "%WINDIR%\SysWOW64\oem7F7.exe" /f
-DEL "%WINDIR%\SysWOW64\service.exe" /f
-DEL "%WINDIR%\SysWOW64\Win7网银补丁.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\SysWOW64\oem7F7.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\SysWOW64\service.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\SysWOW64\Win7网银补丁.exe" /f
 DEL "%WINDIR%\SysWOW64\资料转移工具.exe" /f
 DEL "%WINDIR%\SysWOW64\驱动精灵.exe" /f
 DEL "%WINDIR%\Tasks\SCHEDLGU.TXT" /f
@@ -74,7 +74,7 @@ RD  "%WINDIR%\ModemLogs"  /S  /Q
 RD  "%WINDIR%\msdownld.tmp"  /S  /Q
 RD  "%WINDIR%\Offline Web Pages"  /S  /Q
 RD  "%WINDIR%\Performance"  /S  /Q
-RD  "%WINDIR%\rescache"  /S  /Q
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\rescache"  /S  /Q
 RD  "%WINDIR%\SchCache"  /S  /Q
 RD  "%WINDIR%\servicing\LCU"  /S  /Q
 RD  "%WINDIR%\Setup"  /S  /Q
@@ -99,8 +99,8 @@ DEL "%SYSTEMDRIVE%\Users\Default\AppData\Local\Microsoft\Windows\Explorer\*.*"  
 DEL "%SYSTEMDRIVE%\Users\Public\Music\Sample Music\*.*"  /Q
 DEL "%SYSTEMDRIVE%\Users\Public\Pictures\Sample Pictures\*.*"  /Q
 DEL "%SYSTEMDRIVE%\Users\Public\Videos\Sample Videos\*.*"  /Q
-DEL "%windir%\Web\Wallpaper\*.jpg"  /Q  /S
-DEL "%windir%\Web\Wallpaper\Landscapes\*.jpg"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "%windir%\Web\Wallpaper\*.jpg"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "%windir%\Web\Wallpaper\Landscapes\*.jpg"  /Q  /S
 RD  "%APPDATA%\360Safe"  /Q  /S
 RD  "%APPDATA%\360se"  /Q  /S
 RD  "%APPDATA%\AiQiSoft"  /Q  /S
@@ -145,16 +145,16 @@ RD  "%windir%\CbsTemp"  /S  /Q
 
 ECHO.
 ECHO	清空回收�?RD  %SYSTEMDRIVE%\RECYCLER\*  /Q  /S
-RD  c:\$Recycle.Bin\  /Q  /S
-RD  c:\RECYCLER\  /Q  /S
-RD  d:\$Recycle.Bin\  /Q  /S
-RD  d:\RECYCLER\  /Q  /S
-RD  e:\$Recycle.Bin\  /Q  /S
-RD  e:\RECYCLER\  /Q  /S
-RD  f:\$Recycle.Bin\  /Q  /S
-RD  f:\RECYCLER\  /Q  /S
-RD  g:\$Recycle.Bin\  /Q  /S
-RD  g:\RECYCLER\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  c:\$Recycle.Bin\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  c:\RECYCLER\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  d:\$Recycle.Bin\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  d:\RECYCLER\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  e:\$Recycle.Bin\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  e:\RECYCLER\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  f:\$Recycle.Bin\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  f:\RECYCLER\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  g:\$Recycle.Bin\  /Q  /S
+REM [DANGEROUS-REMOVED] RD  g:\RECYCLER\  /Q  /S
 
 ECHO.
 ECHO	清除 Cookies
@@ -164,8 +164,8 @@ ECHO.
 ECHO	弢�始菜�?DEL "%ALLUSERSPROFILE%\「开始��菜单\Windows Catalog.lnk"
 DEL "%ALLUSERSPROFILE%\「开始��菜单\Windows Update.lnk"
 DEL "%ALLUSERSPROFILE%\「开始��菜单\设定程序访问和默认��?lnk"
-DEL "E:\admin\「开始��菜单\程序\Outlook Express.lnk"
-DEL "E:\admin\「开始��菜单\程序\Windows Media Player.lnk"
+REM [DANGEROUS-REMOVED] DEL "E:\admin\「开始��菜单\程序\Outlook Express.lnk"
+REM [DANGEROUS-REMOVED] DEL "E:\admin\「开始��菜单\程序\Windows Media Player.lnk"
 
 ECHO.
 ECHO	移动弢�始菜单的丢�些快捷方�?DEL "%USERPROFILE%\「开始��菜单\程序\漫游 Windows XP.lnk"
@@ -176,7 +176,7 @@ move "%SYSTEMDRIVE%\Documents and Settings\Administrator\「开始��菜单\程
 move "%SYSTEMDRIVE%\Documents and Settings\Default User\「开始��菜单\程序\远程协助.lnk" "%SYSTEMDRIVE%\Documents and Settings\Default User\「开始��菜单\程序\附件\远程协助.lnk"
 move "%USERPROFILE%\「开始��菜单\程序\Windows Movie Maker.lnk" "%USERPROFILE%\「开始��菜单\程序\附件\娱乐\Windows Movie Maker.lnk"
 move "%USERPROFILE%\「开始��菜单\程序\远程协助.lnk" "%USERPROFILE%\「开始��菜单\程序\附件\远程协助.lnk" /y
-move "E:\admin\「开始��菜单\程序\远程协助.lnk" "E:\admin\「开始��菜单\程序\附件\远程协助.lnk"
+REM [DANGEROUS-REMOVED] move "E:\admin\「开始��菜单\程序\远程协助.lnk" "E:\admin\「开始��菜单\程序\附件\远程协助.lnk"
 
 
 ECHO.
@@ -185,17 +185,17 @@ xcopy "%ALLUSERSPROFILE%\「开始��菜单\程序\附件\娱乐\音量控制.l
 
 ECHO.
 ECHO	清理XP自带的墙�?DEL "%WINDIR%\web\Wallpaper\*.jpg"
-DEL "%WINDIR%\web\Wallpaper\Bliss.bmp"
-DEL "%WINDIR%\web\Wallpaper\Windows\auney.jpg"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\web\Wallpaper\Bliss.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\web\Wallpaper\Windows\auney.jpg"
 
 ECHO	清理备份OEM LOGO
-DEL  "%WINDIR%\system32\oemlogo_bak.bmp"
+REM [DANGEROUS-REMOVED] DEL  "%WINDIR%\system32\oemlogo_bak.bmp"
 
 ECHO.
 ECHO	清理 MaxDOS 自带浏览器插�?DEL "%WINDIR%\system32\BBN_iCafe_071210.dll"
-DEL "D:\MaxDOS\bd.exe"
-net stop knlrun
-sc config knlrun start= Disabled
+REM [DANGEROUS-REMOVED] DEL "D:\MaxDOS\bd.exe"
+REM [DANGEROUS-REMOVED] net stop knlrun
+REM [DANGEROUS-REMOVED] sc config knlrun start= Disabled
 
 ECHO.
 ECHO	清理 搜狗输入�?无用文件
@@ -206,42 +206,42 @@ DEL "%ALLUSERSPROFILE%\「开始��菜单\程序\搜狗拼音输入法\意见�
 DEL "%ALLUSERSPROFILE%\「开始��菜单\程序\搜狗拼音输入法\打字入门.lnk"
 DEL "%ALLUSERSPROFILE%\「开始��菜单\程序\搜狗拼音输入法\皮肤下载.lnk"
 DEL "%ALLUSERSPROFILE%\「开始��菜单\程序\搜狗拼音输入法\细胞词库.lnk"
-DEL "%ProgramFiles% (x86)\SogouInput\*.dmp"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\*.log"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\*.url"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\crashrpt.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\errorlog.txt"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\FlashSkinPreview.ini"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\OlympicNews.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\PinyinUp.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\SkinRecommend.ini"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\SkinReg.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\SogouCloud.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\SogouFlash.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\sogoupy.zip"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\SohuNews.exe"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\urlBaseG.enc"  /S
-DEL "%ProgramFiles% (x86)\SogouInput\urlguide.enc"  /S  /Q
-DEL "%ProgramFiles% (x86)\SogouInput\userNetSchedule.exe"  /S
-DEL "%ProgramFiles%\SogouInput\*.dmp"  /S
-DEL "%ProgramFiles%\SogouInput\*.log"  /S
-DEL "%ProgramFiles%\SogouInput\*.url"  /S
-DEL "%ProgramFiles%\SogouInput\crashrpt.exe"  /S
-DEL "%ProgramFiles%\SogouInput\errorlog.txt"  /S
-DEL "%ProgramFiles%\SogouInput\FlashSkinPreview.ini"  /S
-DEL "%ProgramFiles%\SogouInput\OlympicNews.exe"  /S
-DEL "%ProgramFiles%\SogouInput\PinyinUp.exe"  /S
-DEL "%ProgramFiles%\SogouInput\SkinRecommend.ini"  /S
-DEL "%ProgramFiles%\SogouInput\SkinReg.exe"  /S
-DEL "%ProgramFiles%\SogouInput\SogouCloud.exe"  /S
-DEL "%ProgramFiles%\SogouInput\SogouFlash.exe"  /S
-DEL "%ProgramFiles%\SogouInput\sogoupy.zip"  /S
-DEL "%ProgramFiles%\SogouInput\SohuNews.exe"  /S /F
-DEL "%ProgramFiles%\SogouInput\urlBaseG.enc"  /S
-DEL "%ProgramFiles%\SogouInput\urlguide.enc"  /S
-DEL "%ProgramFiles%\SogouInput\userNetSchedule.exe"  /S
-DEL "E:\Program Files (x86)\SogouInput\*.url"  /S /F
-DEL "E:\Program Files (x86)\SogouInput\SohuNews.exe"  /S /F
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\*.dmp"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\*.log"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\*.url"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\crashrpt.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\errorlog.txt"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\FlashSkinPreview.ini"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\OlympicNews.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\PinyinUp.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\SkinRecommend.ini"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\SkinReg.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\SogouCloud.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\SogouFlash.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\sogoupy.zip"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\SohuNews.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\urlBaseG.enc"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\urlguide.enc"  /S  /Q
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles% (x86)\SogouInput\userNetSchedule.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\*.dmp"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\*.log"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\*.url"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\crashrpt.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\errorlog.txt"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\FlashSkinPreview.ini"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\OlympicNews.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\PinyinUp.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\SkinRecommend.ini"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\SkinReg.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\SogouCloud.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\SogouFlash.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\sogoupy.zip"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\SohuNews.exe"  /S /F
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\urlBaseG.enc"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\urlguide.enc"  /S
+REM [DANGEROUS-REMOVED] DEL "%ProgramFiles%\SogouInput\userNetSchedule.exe"  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Program Files (x86)\SogouInput\*.url"  /S /F
+REM [DANGEROUS-REMOVED] DEL "E:\Program Files (x86)\SogouInput\SohuNews.exe"  /S /F
 RD  "%ALLUSERSPROFILE%\「开始��菜单\程序\搜狗拼音输入法\链接"  /S  /Q
 RD  "%ProgramFiles%\SogouExtension\"  /Q  /S
 
@@ -253,128 +253,128 @@ RD  "%ProgramFiles% (x86)\SogouWBInput\*\ErrorLog\"  /Q  /S
 RD  "%ProgramFiles% (x86)\Tools\"  /Q  /S
 
 ECHO	删除他国语言空文件夹
-RD  "%WINDIR%\system32\1025"
-RD  "%WINDIR%\system32\1028"
-RD  "%WINDIR%\system32\1031"
-RD  "%WINDIR%\system32\1037"
-RD  "%WINDIR%\system32\1041"
-RD  "%WINDIR%\system32\1042"
-RD  "%WINDIR%\system32\1054"
-RD  "%WINDIR%\system32\3076"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1025"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1028"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1031"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1037"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1041"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1042"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\1054"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\system32\3076"
 
 ECHO	删除 boot 他国语言
-RD  "%SYSTEMDRIVE%\boot\cs-CZ"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\da-DK"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\de-DE"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\el-GR"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\es-ES"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\fi-FI"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\hu-HU"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\it-IT"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\ja-JP"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\ko-KR"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\nb-NO"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\nl-NL"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\pl-PL"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\pt-BR"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\pt-PT"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\ru-RU"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\sv-SE"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\tr-TR"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\zh-HK"  /Q  /S
-RD  "%SYSTEMDRIVE%\boot\zh-TW"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\cs-CZ"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\da-DK"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\de-DE"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\el-GR"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\es-ES"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\fi-FI"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\hu-HU"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\it-IT"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\ja-JP"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\ko-KR"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\nb-NO"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\nl-NL"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\pl-PL"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\pt-BR"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\pt-PT"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\ru-RU"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\sv-SE"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\tr-TR"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\zh-HK"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%SYSTEMDRIVE%\boot\zh-TW"  /Q  /S
 
-DEL "%SYSTEMDRIVE%\Boot\Fonts\jpn_boot.ttf"
-DEL "%SYSTEMDRIVE%\Boot\Fonts\kor_boot.ttf"
-DEL "%SYSTEMDRIVE%\Boot\Fonts\cht_boot.ttf"
+REM [DANGEROUS-REMOVED] DEL "%SYSTEMDRIVE%\Boot\Fonts\jpn_boot.ttf"
+REM [DANGEROUS-REMOVED] DEL "%SYSTEMDRIVE%\Boot\Fonts\kor_boot.ttf"
+REM [DANGEROUS-REMOVED] DEL "%SYSTEMDRIVE%\Boot\Fonts\cht_boot.ttf"
 
 
 
 ECHO.
 ECHO	清理多余屏幕保护程序
-DEL "%WINDIR%\system32\dllcache\scrnsave.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ss3dfo.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ssbezier.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ssflwbox.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ssmarque.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ssmyst.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\sspipes.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\ssstars.scr"  /Q /f
-DEL "%WINDIR%\system32\dllcache\sstext3d.scr"  /Q /f
-DEL "%WINDIR%\system32\scrnsave.scr"  /Q /f
-DEL "%WINDIR%\system32\ss3dfo.scr"  /Q /f
-DEL "%WINDIR%\system32\ssbezier.scr"  /Q /f
-DEL "%WINDIR%\system32\ssflwbox.scr"  /Q /f
-DEL "%WINDIR%\system32\ssmarque.scr"  /Q /f
-DEL "%WINDIR%\system32\ssmyst.scr"  /Q /f
-DEL "%WINDIR%\system32\sspipes.scr"  /Q /f
-DEL "%WINDIR%\system32\ssstars.scr"  /Q /f
-DEL "%WINDIR%\system32\sstext3d.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\scrnsave.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ss3dfo.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ssbezier.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ssflwbox.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ssmarque.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ssmyst.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\sspipes.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\ssstars.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\sstext3d.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\scrnsave.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ss3dfo.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ssbezier.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ssflwbox.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ssmarque.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ssmyst.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\sspipes.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\ssstars.scr"  /Q /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\sstext3d.scr"  /Q /f
 
 ECHO	删除自动更新程序
-DEL "%WINDIR%\system32\wuauclt.exe"
-DEL "%WINDIR%\system32\wuauclt1.exe"
-DEL "%WINDIR%\system32\dllcache\wuauclt.exe"
-DEL "%WINDIR%\system32\dllcache\wuauclt1.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\wuauclt.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\wuauclt1.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\wuauclt.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\wuauclt1.exe"
 
 ECHO.
 ECHO	清理多余帮助
 rename "%WINDIR%\Help\agt0804.hlp" agt0804_.hlp
-DEL "%WINDIR%\Help\agt*.hlp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Help\agt*.hlp"
 rename "%WINDIR%\Help\agt0804_.hlp" agt0804.hlp
 
 ECHO.
 ECHO	清理多余输入�? 繁体中文输入�?RD  "%WINDIR%\ime\CHTIME"  /Q  /S
-DEL "%WINDIR%\system32\dllcache\hwxcht.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\hwxcht.dll"
 
 ECHO	IMJP8_1 日文输入�?DEL "%WINDIR%\system32\dllcache\cplexe.exe"
-DEL "%WINDIR%\system32\dllcache\imjpcic.dll"
-DEL "%WINDIR%\system32\dllcache\imjpcus.dll"
-DEL "%WINDIR%\system32\dllcache\imjpdadm.exe"
-DEL "%WINDIR%\system32\dllcache\imjpdct.dll"
-DEL "%WINDIR%\system32\dllcache\imjpdct.exe"
-DEL "%WINDIR%\system32\dllcache\imjpdsvr.exe"
-DEL "%WINDIR%\system32\dllcache\imjpinst.exe"
-DEL "%WINDIR%\system32\dllcache\imjpmig.exe"
-DEL "%WINDIR%\system32\dllcache\imjprw.exe"
-DEL "%WINDIR%\system32\dllcache\imjpuex.exe"
-DEL "%WINDIR%\system32\dllcache\imjputy.exe"
-DEL "%WINDIR%\system32\dllcache\imjputyc.dll"
-RD  "%WINDIR%\ime\IMJP8_1"  /Q  /S 
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpcic.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpcus.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpdadm.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpdct.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpdct.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpdsvr.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpinst.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpmig.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjprw.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjpuex.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjputy.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imjputyc.dll"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\ime\IMJP8_1"  /Q  /S 
 
 ECHO	IMJP8_1\APPLETS
-DEL "%WINDIR%\system32\dllcache\hwxjpn.dll"
-DEL "%WINDIR%\system32\dllcache\imskdic.dll"
-DEL "%WINDIR%\system32\dllcache\imskf.dll"
-DEL "%WINDIR%\system32\dllcache\multibox.dll"
-DEL "%WINDIR%\system32\dllcache\softkey.dll"
-DEL "%WINDIR%\system32\dllcache\voicepad.dll"
-DEL "%WINDIR%\system32\dllcache\voicesub.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\hwxjpn.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imskdic.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imskf.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\multibox.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\softkey.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\voicepad.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\voicesub.dll"
 
 ECHO	IMKR6_1
-RD  "%WINDIR%\ime\IMKR6_1"  /Q  /S 
-DEL "%WINDIR%\system32\dllcache\imekrmig.exe"
-DEL "%WINDIR%\system32\dllcache\imkrinst.exe"
-DEL "%WINDIR%\system32\dllcache\imekrcic.dll"
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\ime\IMKR6_1"  /Q  /S 
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imekrmig.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imkrinst.exe"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imekrcic.dll"
 
 ECHO	IMKR6_1\Applets
-DEL "%WINDIR%\system32\dllcache\hwxkor.dll"
-DEL "%WINDIR%\system32\dllcache\imekrmbx.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\hwxkor.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imekrmbx.dll"
 
 ECHO	IMKR6_1\Dicts
-DEL "%WINDIR%\system32\dllcache\hanjadic.dll"
-DEL "%WINDIR%\system32\dllcache\hanja.lex"
-DEL "%WINDIR%\system32\dllcache\imekr.lex"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\hanjadic.dll"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\hanja.lex"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\dllcache\imekr.lex"
 
 ECHO Win7 IME
-RD  "%WINDIR%\IME\IMEJP10"  /S  /Q
-RD  "%WINDIR%\IME\IMETC10"  /S  /Q
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\IME\IMEJP10"  /S  /Q
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\IME\IMETC10"  /S  /Q
 
 
 
 ECHO 显卡相关文件
-DEL "%WINDIR%\system32\igfxr*.lrc"  /Q
-DEL "%WINDIR%\system32\drivers\igfxr*.lrc"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\igfxr*.lrc"  /Q
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\system32\drivers\igfxr*.lrc"  /Q  /S
 
 ECHO.
 ECHO 清理系统补丁备份
@@ -389,23 +389,23 @@ DEL "%USERPROFILE%\「开始��菜单\*.com*"  /Q  /S
 
 
 ECHO 多余的声卡应用程�?DEL "%WINDIR%\ALCMTR.EXE" /f
-DEL "%WINDIR%\ALCWZRD.EXE" /f
-DEL "%WINDIR%\RtlUpd.exe" /f
-DEL "%WINDIR%\SOUNDMAN.EXE" /f
-DEL "%WINDIR%\SkyTel.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\ALCWZRD.EXE" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\RtlUpd.exe" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\SOUNDMAN.EXE" /f
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\SkyTel.exe" /f
 
 ECHO	清理 Windows 自带 BMP 墙纸
-DEL "%WINDIR%\Blue Lace 16.bmp"
-DEL "%WINDIR%\Coffee Bean.bmp"
-DEL "%WINDIR%\FeatherTexture.bmp"
-DEL "%WINDIR%\Gone Fishing.bmp"
-DEL "%WINDIR%\Greenstone.bmp"
-DEL "%WINDIR%\Prairie Wind.bmp"
-DEL "%WINDIR%\Rhododendron.bmp"
-DEL "%WINDIR%\River Sumida.bmp"
-DEL "%WINDIR%\Santa Fe Stucco.bmp"
-DEL "%WINDIR%\Soap Bubbles.bmp"
-DEL "%WINDIR%\Zapotec.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Blue Lace 16.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Coffee Bean.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\FeatherTexture.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Gone Fishing.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Greenstone.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Prairie Wind.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Rhododendron.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\River Sumida.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Santa Fe Stucco.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Soap Bubbles.bmp"
+REM [DANGEROUS-REMOVED] DEL "%WINDIR%\Zapotec.bmp"
 
 ECHO.
 ECHO	清理快��启动栏图标
@@ -435,14 +435,14 @@ ECHO	清理WIN7 IE收藏夹原始条�?RD  "%USERPROFILE%\Favorites\MSN 网站" 
 RD  "%USERPROFILE%\Favorites\Microsoft 网站"  /Q  /S
 RD  "%USERPROFILE%\Favorites\Windows Live"  /Q  /S
 RD  "E%USERPROFILE%\Favorites\Links for 中国"  /Q  /S
-RD  "E:\admin\Favorites\Links for 中国"  /Q  /S
-RD  "E:\admin\Favorites\MSN 网站"  /Q  /S
-RD  "E:\admin\Favorites\Microsoft 网站"  /Q  /S
-RD  "E:\admin\Favorites\Windows Live"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "E:\admin\Favorites\Links for 中国"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "E:\admin\Favorites\MSN 网站"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "E:\admin\Favorites\Microsoft 网站"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "E:\admin\Favorites\Windows Live"  /Q  /S
 
 ECHO.
 ECHO	清理多余鼠标指针
-RD  "%WINDIR%\Cursors\"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%WINDIR%\Cursors\"  /Q  /S
 
 ECHO.
 ECHO	清理 Program Files 多余文件
@@ -491,7 +491,7 @@ RD  "%ProgramData%\Kingsoft\"  /Q  /S
 RD  "%ProgramData%\Microsoft\Windows\Start Menu\Programs\工具\"  /Q  /S
 RD  "%ProgramData%\PACE Anti-Piracy\"  /Q  /S
 RD  "%ProgramData%\PearlMountain\"  /Q  /S
-RD  "%ProgramData%\SogouInput\"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "%ProgramData%\SogouInput\"  /Q  /S
 RD  "%ProgramData%\firebird\"  /Q  /S
 RD  "%ProgramData%\kdesk\"  /Q  /S
 
@@ -523,7 +523,7 @@ RD  "%ProgramData%\QQPet"  /Q  /S
 
 
 ECHO 清理 微信
-RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Temp"  /Q  /S
+REM [DANGEROUS-REMOVED] RD  "E:\Users\Admin\Documents\WeChat Files\xepinchan\Temp"  /Q  /S
 
 
 ECHO.
@@ -539,7 +539,7 @@ RD  "%ProgramData%\ESET\ESET Smart Security\Updfiles\temp"  /Q  /S
 ECHO.
 ECHO	清理 TeamViewer
 DEL "%APPDATA%\Roaming\TeamViewer\*.*" /f  /Q  /S
-DEL "E:\Dropbox\Program\TeamViewer\*.log" /f  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Dropbox\Program\TeamViewer\*.log" /f  /Q  /S
 
 ECHO	清理 PPStream
 DEL "%APPDATA%\Roaming\PPStream\CLCacher\*.*" /f  /Q  /S
@@ -559,7 +559,7 @@ ECHO	清理 WD
 RD  "%ProgramData%\Western Digital\"  /Q  /S
 
 ECHO	清理 WPS
-DEL  "E:\Program Files\WPS Office\wpscenter.exe"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL  "E:\Program Files\WPS Office\wpscenter.exe"  /Q  /S
 
 ECHO.
 ECHO	清理3721文件
@@ -613,10 +613,10 @@ RD  "%ALLUSERSPROFILE%\Application Data\Kingsoft\PowerWoRD Lite"  /Q
 RD  "%ALLUSERSPROFILE%\Application Data\TEMP"  /Q
 
 ECHO PHP Now 清理
-DEL "E:\Dropbox\Servkit\logs\*.*"  /Q  /S
-DEL "E:\Dropbox\www\Phpnow\Apache-22\logs\*.*"  /Q  /S
-DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\*.err"  /Q  /S
-DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\mysql-bin*.*"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Dropbox\Servkit\logs\*.*"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Dropbox\www\Phpnow\Apache-22\logs\*.*"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\*.err"  /Q  /S
+REM [DANGEROUS-REMOVED] DEL "E:\Dropbox\www\Phpnow\MySQL-5.1.50\data\mysql-bin*.*"  /Q  /S
 REM DEL "E:\Dropbox\*.log"  /Q  /S
 
 DEL "%Windir%\Installer\5b3ce1.msi"  /Q  /S
@@ -631,4 +631,8 @@ ECHO	系统清理已经完成, 感谢你使�?%author% 的作品！
 ECHO	Cleaner is all done, %author% Thanks for use!
 
 PAUSE
+
+
+
+
 
