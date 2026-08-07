@@ -23,12 +23,16 @@
 - GUI `firefox_cache` 误删整个 Firefox Profiles 目录 → 限定到 `cache2`/`cache` 子目录
 - `Windows_Cleaner_Enhanced.bat` 横幅中文乱码 → 改纯 ASCII
 - README/OPENSPEC 中 GUI 与启动器内容不一致 → 双语文档同步
+- `Windows_Cleaner_Enhanced.bat` 构建日期 `20240506` 残留 → 修正为 `20260807`
+- OPENSPEC 系统清理清单仍列 `Resource cache`/`Setup folders` → 与代码对齐移除并标注 SAFE 跳过
 
 ### 安全 (Security)
 - `legacy/Windows_Cleaner.bat` 首行加 `exit /b` 禁止直接运行，并注释所有系统级破坏性命令
   （wuauclt 删除、knlrun 禁用、C:\Recovery、IME/Cursors/Help/rescache、boot 语言包、硬编码个人路径等）
 - GUI 移除删除系统关键目录的高级项（Cursors / Help / Wallpaper / rescache / IME），
   仅保留浏览器缓存、字体缓存、软件缓存类安全高级项
+- CLI `Windows_Cleaner_Enhanced.bat` 同步注释化 `rescache`、`Setup` 的 `RD /S /Q` 删除，
+  与 GUI 行为一致，避免误删系统核心目录
 - 清理任务默认均不勾选，危险项标红并需二次确认
 
 ### 重构 (Refactored)

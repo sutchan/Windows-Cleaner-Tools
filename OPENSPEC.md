@@ -64,12 +64,11 @@ A comprehensive batch script solution for cleaning temporary files, caches, brow
 #### 2.1.6 Windows System Cleanup
 - Windows installer cache (Config.Msi)
 - Performance logs
-- Resource cache
-- Setup folders
 - Servicing LCU folders
 - Downloaded Program Files
 - LiveKernelReports
 - Tracing directories
+- [SAFE] Resource cache / Setup folders 属系统核心目录，GUI 与 CLI 均默认跳过，避免误删导致系统不稳定
 
 #### 2.1.7 Recycle Bin Cleanup
 - $Recycle.Bin on all drives (C through L)

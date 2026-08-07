@@ -17,7 +17,7 @@ if %errorlevel% neq 0 (
 SET version=2.1.0
 SET author=Sut
 SET title=Windows Cleaner Tools
-SET build=20240506
+SET build=20260807
 
 title %title% by %author% v%version%
 COLOR 2F
@@ -178,15 +178,16 @@ IF EXIST "C:\PerfLogs" (
     RD /S /Q "C:\PerfLogs" >NUL 2>&1
 )
 
-REM Windows resource cache
-IF EXIST "%WINDIR%\rescache" (
-    RD /S /Q "%WINDIR%\rescache" >NUL 2>&1
-)
+REM [SAFE] Windows resource cache — 系统核心目录，误删可致系统不稳定
+REM         GUI 版已移除该项，CLI 保持行为一致，默认跳过
+REM IF EXIST "%WINDIR%\rescache" (
+REM     RD /S /Q "%WINDIR%\rescache" >NUL 2>&1
+REM )
 
-REM Windows setup folder
-IF EXIST "%WINDIR%\Setup" (
-    RD /S /Q "%WINDIR%\Setup" >NUL 2>&1
-)
+REM [SAFE] Windows setup folder — 现代 Windows 多为空/受保护，跳过以防误删
+REM IF EXIST "%WINDIR%\Setup" (
+REM     RD /S /Q "%WINDIR%\Setup" >NUL 2>&1
+REM )
 
 REM Windows servicing LCU
 IF EXIST "%WINDIR%\servicing\LCU" (
